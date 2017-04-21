@@ -1,0 +1,26 @@
+{% load static %}
+
+<nav class="navbar navbar-toggleable-md navbar-light navbar-inverse bg-inverse header-nav">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  	<span class="navbar-text navbar-right display-none" id="signed-in">
+			Signed in as <a href="#" class="navbar-link user-name" id="username-signed"></a>
+		</span>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  <span class="navbar-brand text-bold margin-left-30">
+  	<img alt="Brand" src="{% static "assets/images/logo.png" %}" class="logo img-responsive">
+  	<span class="tittle-logo"> My Carwash </span>
+	</span>
+  
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav margin-left-50">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Features</a>
+      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link display-none" href="#">Log out</a>
+      <!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
+    </div>
+  </div>
+</nav>
