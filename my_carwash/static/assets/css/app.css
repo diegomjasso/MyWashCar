@@ -3,11 +3,23 @@
 @import	url('app/padding.css');
 @import	url('app/width.css');
 
+@import	url('app/mobile/mobile-size-small.css');
+@import	url('app/mobile/mobile-size-small-medium.css');
+@import	url('app/mobile/mobile-size-medium-medium.css');
+@import	url('app/mobile/mobile-size-large.css');
+@import	url('app/mobile/mobile-size-large-medium.css');
+
 /* Fonts */
-/*@import url('fonts/Gloria_Hallelujah/GloriaHallelujah.ttf');
-@import url('fonts/Indie_Flower/IndieFlower.ttf');
-@import url('fonts/Permanent_Marker/PermanentMarker.ttf');*/
-/*@import url('fonts/Clicker_Script/ClickerScript-Regular.ttf');*/
+/*	@import url('fonts/Permanent_Marker/PermanentMarker.ttf'); */
+@font-face {
+    font-family: 'Gloria Hallelujah';
+    src: url('fonts/Gloria_Hallelujah/GloriaHallelujah.ttf');
+}
+
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('fonts/Indie_Flower/IndieFlower.ttf');
+}
 
 @font-face {
     font-family: 'Clicker Script';
@@ -42,59 +54,48 @@
 	display:	inline-block;
 }
 
-.logo{
+.logo	{
 	width:	50px;
 	height: 50px;
-	margin-left: 1em;
-	margin-left: 1em;
 }
 
 .tittle-logo	{
 	font-family: 'Clicker Script', cursive;
-	font-size: 2em;
     color:  #eceeef;
-    margin-left: 1em;
 }
 
+.parallax {
+	/* Full height */
+    height: 100%; 
 
-@media only screen and (max-width: 219px) {
-	.tittle-logo	{
-	    display: none;
-	}
-
-	.logo {
-		visibility: hidden;
-	}
+    /* Create the parallax scrolling effect */
+    background-attachment:	fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@media only screen and (min-width: 220px) and (max-width : 299px) {
-	.tittle-logo	{
-		display: none;
-	}
-
-	.logo {
-		margin-left: 0em;
-	}
+.parallax-3 {
+	background-image: url('http://dreamlovewallpapers.com/wp-content/uploads/2015/02/Beautiful-Girl-Stepping-Out-Of-Car-Wallpaper.jpg');	
 }
 
-@media only screen and (min-width: 300px) and (max-width : 412px) {
-	.tittle-logo	{
-	    display: none;
-	}
-
-	.logo {
-		margin-left: 0.25em;
-	}
+.parallax-2 {
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/ec/0c/3f/ec0c3f2d7f44e1c67d8285a9e66912f5.jpg');
 }
 
-@media only screen and (min-width: 413px) and (max-width : 990px) {
-	.tittle-logo	{
-	    font-size: 0.9em;
-	    display: block;
-	    margin-left: 0em;
-	}
+.parallax-1	{
+	background-image: url('https://images2.alphacoders.com/255/thumb-1920-255390.jpg');
+}
 
-	.logo {
-		margin-left: 0.45em;
-	}
+body, html {
+    height: 100%;
+}
+
+.authentication {
+	width: 20em;
+	background: #F1F1F1;
+	border-radius: 0em 1em 0em 1em;
+	margin: 2em 2em 0em 0em;
+	padding: 2.5em 1.5em 2em 1.5em;
+	float: right;
 }

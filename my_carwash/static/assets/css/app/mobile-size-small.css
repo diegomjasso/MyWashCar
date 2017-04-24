@@ -1,0 +1,10 @@
+/**  Mobile size Views  **/
+@media only screen and (max-width: 219px) {
+	.tittle-logo	{
+	    display: none;
+	}
+
+	.logo {
+		visibility: hidden;
+	}
+}

@@ -1,0 +1,11 @@
+@media only screen and (min-width: 413px) and (max-width : 990px) {
+	.tittle-logo	{
+	    font-size: 0.9em;
+	    display: block;
+	    margin-left: 0em;
+	}
+
+	.logo {
+		margin-left: 0.45em;
+	}
+}
