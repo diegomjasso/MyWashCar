@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'my_carwash',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'D1234abcDE',
         'HOST': 'localhost',
         'PORT': '3306',
         'OPTIONS': {
