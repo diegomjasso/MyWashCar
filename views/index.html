@@ -2,62 +2,152 @@
 
 {% block content %}
     {%  include "templates/header.html"  %}
-    <div class="parallax parallax-1">
-    	<div class="authentication">
-    		<div class="form-group has-success">
-			  <label class="control-label" for="inputSuccess1">Input with success</label>
-			  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
-			  <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
-			</div>
-			<div class="form-group has-warning">
-			  <label class="control-label" for="inputWarning1">Input with warning</label>
-			  <input type="text" class="form-control" id="inputWarning1">
-			</div>
-			<div class="form-group has-error">
-			  <label class="control-label" for="inputError1">Input with error</label>
-			  <input type="text" class="form-control" id="inputError1">
-			</div>
-			<div class="has-success">
-			  <div class="checkbox">
-			    <label>
-			      <input type="checkbox" id="checkboxSuccess" value="option1">
-			      Checkbox with success
-			    </label>
-			  </div>
-			</div>
-			<div class="has-warning">
-			  <div class="checkbox">
-			    <label>
-			      <input type="checkbox" id="checkboxWarning" value="option1">
-			      Checkbox with warning
-			    </label>
-			  </div>
-			</div>
-			<div class="has-error">
-			  <div class="checkbox">
-			    <label>
-			      <input type="checkbox" id="checkboxError" value="option1">
-			      Checkbox with error
-			    </label>
-			  </div>
-			</div>
-    	</div>
+    <div class="container-index ">
+	    <div class="parallax parallax-1 " id="home">
+	    	
+	    	<div class="authentication ">
+	    		<!-- Tab Navs -->
+	    		<ul class="nav nav-tabs" role="tablist">
+					  <li class="nav-item">
+					    <a class="nav-link active" data-toggle="tab" href="#newAccount" role="tab">Nueva Cuenta</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" data-toggle="tab" href="#myBusiness" role="tab">Mi Negocio</a>
+					  </li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content padding-10">
+					  <div class="tab-pane active " id="newAccount" role="tabpanel">
+				  		<div class="form-group">
+						  	<label class="control-label" for="inputSuccess1">Datos personales</label>
+						  	<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Nombre (s)">
+							  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Apellidos">
+							</div>
+							<div class="form-group">
+							  <label class="control-label" for="inputWarning1">Datos de contacto</label>
+							  <input type="text" class="form-control" id="inputWarning1" placeholder="Email
+							  ">
+							  <input type="text" class="form-control" id="inputWarning1" placeholder="Telefono
+							  ">
+							</div>
+							<div class="form-group">
+							  <label class="control-label" for="inputError1">Datos de Ubicación</label>
+							  <input type="text" class="form-control" id="inputError1" placeholder="Codígo Postal">
+							</div>
+							<div class="has-error">
+							  <div class="checkbox text-center">
+							    <div class="btn btn-primary btn-createaccout-sumbit text-bold margin-top-20" id="landingPageCreateAccount"> 
+							    	Crear mi cuenta WashCar
+							    </div>
+							  </div>
+							</div>
+					  </div>
+					  <div class="tab-pane" id="myBusiness" role="tabpanel">
+					  	<div class="container-fluid">
+							  <div class="row">
+						      <div class="col-xs-12 col-md-12 col-sm-12">
+										<label class="text-center text-bold text-invitation" >
+											Tienes un Auto-lavado
+										</label>
+
+										<label class="text-center text-bold text-invitation" >
+											¿Quieres mejorar tu negocio?
+										</label>
+
+										<label class="text-center text-bold text-invitation" >
+											¿Necesitas mejor Administración?
+										</label>
+
+										<label class="text-center text-bold text-invitation" >
+											¡Tenemos la solución para ti! 
+										</label>
+
+										<div class="btn btn-primary btn-comenzar-sumbit text-bold margin-top-20" id="comenzarAhora">
+											¡Comenzar Ahora!
+										</div>
+						      </div>
+							  </div>
+							</div>
+					  </div>
+					</div>
+
+  		</div>
     </div>
-    <div class="">
-      <h1>No !</h1>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+    <div class="serices-tab " id="services">
+      <div class="row max-width padding-left-40 padding-right-40">
+      	<div class="col-md-12">
+      		<div class="row">
+      			<div class="col-xs-4 col-md-4 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">
+      				<dl class="dl-horizontal">
+      					<i class="fa fa-globe thumbnails-icon"></i>
+							  <dt class="thumbnails-tittle">
+							  	Ubicacíon
+							  </dt>
+							  <dd class="thumbnails-text">Encuentra tu auto lavado mas cercano. Descarga nuestra app y visualiza cuales son las mejores opciones para lavar tu auto cerca de ti.</dd>
+							</dl>
+      			</div>
+      			<div class="col-xs-4 col-md-4 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">	
+      				<dl class="dl-horizontal">
+      					<i class="fa fa-money thumbnails-icon"></i>
+							  <dt class="thumbnails-tittle">
+							  	Encuentra el mejor precio
+							  </dt>
+							  <dd class="thumbnails-text">
+							  	Descubre donde puedes ahorrar mas dinero al lavar tu auto.
+							  </dd>
+							</dl>
+      			</div>
+      			<div class="col-xs-4 col-md-4 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">
+      				<dl class="dl-horizontal">
+      					<i class="fa fa-clock-o thumbnails-icon"></i>
+							  <dt class="thumbnails-tittle">
+							  	No pierdas tu tiempo
+							  </dt>
+							  <dd class="thumbnails-text">¿No quieres esperar en la fila del auto lavado?. Localiza el auto lavado con con la atención inmediata en tiempo real.</dd>
+							</dl>
+      			</div>
+      		</div>
+      	</div>
+      </div>
     </div>
-    <div class="parallax parallax-2"></div>
-    <div class="">
-      <h1>Si !</h1>
-      <p>...</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+
+    <div class="parallax parallax-2" id="servicesBusinessParallax"></div>
+
+		<div class="serices-tab " id="servicesBusiness">
+      <div class="row max-width padding-left-40 padding-right-40">
+      	<div class="col-md-12">
+      		<div class="row">
+      			<div class="col-xs-6 col-md-6 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">
+      				<dl class="dl-horizontal">
+      					<i class="fa fa-briefcase thumbnails-icon"></i>
+							  <dt class="thumbnails-tittle">
+							  	....
+							  </dt>
+							  <dd class="thumbnails-text">.......</dd>
+							</dl>
+      			</div>
+      			<div class="col-xs-6 col-md-6 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">	
+      				<dl class="dl-horizontal">
+      					<i class="fa fa-line-chart thumbnails-icon"></i>
+							  <dt class="thumbnails-tittle">
+							  	....
+							  </dt>
+							  <dd class="thumbnails-text">
+							  	.......
+							  </dd>
+							</dl>
+      			</div>
+      		</div>
+      	</div>
+      </div>
     </div>
-    <div class="parallax parallax-3"></div>
-    <div class="">
+
+    <div class="footer-nav">
       <h1>Footer !</h1>
       <p>...</p>
     </div>
-{% endblock %}
 
+  </div>
+{% endblock %}

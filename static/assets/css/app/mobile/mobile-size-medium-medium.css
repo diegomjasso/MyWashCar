@@ -6,4 +6,30 @@
 	.logo {
 		margin-left: 0.25em;
 	}
+
+	.authentication {
+		margin:	20px;
+	}
+
+	.container-index	{
+		padding-top: 70px;
+	}
+	
+	.btn-createaccout-sumbit	{
+		font-size: 14px;
+	}
+
+	.btn-createaccout-sumbit:hover	{
+		font-size: 14px;
+	}
+
+	.parallax-1	{
+		height: 110%;
+	}
+
+	.thumbnail-content {
+		border-style: solid;
+		border-width: 1px 0px 1px  0px;
+		border-color: white;	
+	}
 }

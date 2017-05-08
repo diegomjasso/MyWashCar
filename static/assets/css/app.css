@@ -65,8 +65,6 @@
 }
 
 .parallax {
-	/* Full height */
-    height: 100%; 
 
     /* Create the parallax scrolling effect */
     background-attachment:	fixed;
@@ -75,12 +73,10 @@
     background-size: cover;
 }
 
-.parallax-3 {
-	background-image: url('http://dreamlovewallpapers.com/wp-content/uploads/2015/02/Beautiful-Girl-Stepping-Out-Of-Car-Wallpaper.jpg');	
-}
-
 .parallax-2 {
-	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/ec/0c/3f/ec0c3f2d7f44e1c67d8285a9e66912f5.jpg');
+	/* Full height */
+    height: 100%; 
+	background-image: url('http://www.links-financial.com/wp-content/uploads/2016/11/handshake.jpg');
 }
 
 .parallax-1	{
@@ -91,11 +87,168 @@ body, html {
     height: 100%;
 }
 
+.header-nav{
+	position: fixed;
+    z-index: 100000;
+	width: 100%;
+}
+
 .authentication {
 	width: 20em;
-	background: #F1F1F1;
+	/*	background: #d2e9f2;	*/
+	background: #292b2c!important;
 	border-radius: 0em 1em 0em 1em;
-	margin: 2em 2em 0em 0em;
 	padding: 2.5em 1.5em 2em 1.5em;
+	border-style: solid;
+	border-color: #ddd;
+	border-width: 1px;
 	float: right;
+	font-size: 16px;
+}
+
+.container-index	{
+	height: 100%;
+}
+
+.control-label {
+	font-size: 12px;
+}
+
+.btn-createaccout-sumbit	{
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	background: white;
+	color:	gray;
+	border-color: gray;	
+	border-width: 2px;
+}
+
+.btn-createaccout-sumbit:hover	{
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	background: white;
+	color:	gray;
+	border-color: gray;	
+	border-width: 3px;
+	cursor: pointer;
+}
+
+.tab-content	{
+	background-color: #fff;
+	border-radius: 0em 1em 0em 1em;
+	border: solid;
+	border-width: 0em 1px 1px 1px;
+	border-color: #ddd;
+	text-align: center;
+}
+
+.tab-pane	{
+	text-align: center;
+}
+
+.text-invitation	{
+	margin-top: 5px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.btn-comenzar-sumbit {
+	background: orange;
+	font-family: 'Indie Flower', cursive;
+	font-size: 16px;
+}
+
+.btn-comenzar-sumbit:hover {
+	background: orange;
+	cursor: pointer;
+	border-width: 2px;
+	font-family: 'Indie Flower', cursive;
+}
+
+.nav	{
+	border-style: none;
+}
+
+.nav-item	{
+	border-radius: 0em 0em 1em 1em;
+}
+
+.nav-link	{
+	color: gray;
+}
+
+.nav-link:hover	{
+	color: white;
+}
+
+/* all */
+::-webkit-input-placeholder { font-family: 'Indie Flower', cursive; }
+::-moz-placeholder { font-family: 'Indie Flower', cursive; } /* firefox 19+ */
+:-ms-input-placeholder { font-family: 'Indie Flower', cursive; } /* ie */
+input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
+
+.form-controll	input:-moz-placeholder{
+	font-family: 'Indie Flower', cursive;
+}
+
+.serices-tab	{
+	color: white;
+	background: #292b2c!important;
+	text-align: center;
+}
+
+.thumbnails-tittle	{
+	display: block;
+	font-size: 50px;
+	font-family: 'Indie Flower', cursive;
+}
+
+.thumbnails-text	{
+	font-size: 14px;
+	text-align: justify;
+}
+
+.fa.fa-globe.thumbnails-icon		{
+	color: white;
+	font-size: 200px;
+	display: block;
+}
+
+.fa.fa-money.thumbnails-icon		{
+	color: white;
+	font-size: 200px;
+	display: block;
+}
+
+.fa.fa-clock-o.thumbnails-icon		{
+	color: white;
+	font-size: 200px;
+	display: block;
+}
+
+.fa.fa-briefcase.thumbnails-icon		{
+	color: white;
+	font-size: 200px;
+	display: block;
+}
+
+.fa.fa-line-chart.thumbnails-icon		{
+	color: white;
+	font-size: 200px;
+	display: block;
+}
+
+.thumbnail-content	{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	/*
+		border-style: solid;
+		border-width: 1px 0px 1px  0px;
+		border-color: #292b2c!important;	
+	*/
+}
+
+.footer-nav	{
+	background: #292b2c!important;
+	color: white;
 }

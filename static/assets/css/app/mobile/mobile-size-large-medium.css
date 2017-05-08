@@ -8,4 +8,24 @@
 	.logo {
 		margin-left: 0.45em;
 	}
+
+	.authentication {
+		margin:	20px;
+	}
+
+	.container-index	{
+		padding-top: 70px;
+	}
+
+	.btn-createaccout-sumbit	{
+		font-size: 14px;
+	}
+
+	.btn-createaccout-sumbit:hover	{
+		font-size: 14px;
+	}
+
+	.parallax-1	{
+		height: 110%;
+	}
 }

@@ -10,4 +10,17 @@
 		font-size: 2em;
 	    margin-left: 1em;
 	}
+
+	.authentication {
+		margin:	40px;
+	}
+
+	.container-index	{
+		padding-top: 80px;
+	}
+
+	.parallax-1	{
+		height: 110%;
+	}
+	
 }
