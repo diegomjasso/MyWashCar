@@ -74,13 +74,16 @@
 }
 
 .parallax-2 {
+	text-align: center;
 	/* Full height */
     height: 100%; 
-	background-image: url('http://www.links-financial.com/wp-content/uploads/2016/11/handshake.jpg');
+	background-image: url('../images/handshake.jpg');
 }
 
 .parallax-1	{
-	background-image: url('https://images2.alphacoders.com/255/thumb-1920-255390.jpg');
+	text-align: right;
+	padding-right: 100px;
+	background-image: url('../images/cleaning-tyre.jpg');
 }
 
 body, html {
@@ -105,7 +108,6 @@ body, html {
 
 .container-index	{
 	height: 100%;
-	text-align: center;
 	align-items: center;
 }
 
