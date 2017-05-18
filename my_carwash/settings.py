@@ -30,7 +30,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'jet.dashboard',
     'jet',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'geoposition',
     'rest_framework',
+    'negocios.apps.NegociosConfig',
+    'perfiles.apps.PerfilesConfig',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +124,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+# Google API Key
+GEOPOSITION_GOOGLE_MAPS_API_KEY = 'AIzaSyBEEfsw-09eCt56vqd1M6ySFYTkmXsYtRU'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
