@@ -11,7 +11,7 @@
 
 	.authentication {
 		margin-top:	130px;
-		width: 22em;
+		width: 18em;
 		padding: 20px 15px 20px 15px;
 	}
 
@@ -32,4 +32,16 @@
 	.parallax-1	{
 		height: 110%;
 	}
+}
+
+@media only screen and (min-width: 481px) and (max-width : 767px) {
+	.authentication {
+		display: none;
+	}	
+}
+
+@media only screen and (min-width: 768px) and (max-width : 990px) {
+	.authentication {
+		display: inline-block;
+	}	
 }
