@@ -1,4 +1,4 @@
-@media only screen and (min-width: 300px) and (max-width : 412px) {
+@media only screen and (min-width: 300px) and (max-width : 480px) {
 	.tittle-logo	{
 	    display: none;
 	}
@@ -8,11 +8,13 @@
 	}
 
 	.authentication {
-		margin:	20px;
+		margin-top:	50px;
+		width: 18em;
+		padding: 20px 15px 20px 15px;
 	}
 
 	.container-index	{
-		padding-top: 70px;
+		padding-top: 50px;
 	}
 	
 	.btn-createaccout-sumbit	{
@@ -25,11 +27,18 @@
 
 	.parallax-1	{
 		height: 110%;
+
 	}
 
 	.thumbnail-content {
 		border-style: solid;
 		border-width: 1px 0px 1px  0px;
 		border-color: white;	
+	}
+
+	.parallax-2 .tittle h1	{
+		font-size: 65px;
+		padding-top: 150px;
+		padding-bottom: 150px;
 	}
 }

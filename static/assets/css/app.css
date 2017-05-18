@@ -50,7 +50,7 @@
 	display:	block;
 }
 
-.display-inline{
+.display-inline	{
 	display:	inline-block;
 }
 
@@ -94,20 +94,19 @@ body, html {
 }
 
 .authentication {
-	width: 20em;
-	/*	background: #d2e9f2;	*/
 	background: #292b2c!important;
 	border-radius: 0em 1em 0em 1em;
-	padding: 2.5em 1.5em 2em 1.5em;
 	border-style: solid;
 	border-color: #ddd;
 	border-width: 1px;
-	float: right;
 	font-size: 16px;
+	display: inline-block;
 }
 
 .container-index	{
 	height: 100%;
+	text-align: center;
+	align-items: center;
 }
 
 .control-label {
@@ -197,9 +196,15 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	text-align: center;
 }
 
+.serices-tab-business	{
+	background: white;
+	color: #292b2c!important;
+	text-align: center;	
+}
+
 .thumbnails-tittle	{
 	display: block;
-	font-size: 50px;
+	font-size: 40px;
 	font-family: 'Indie Flower', cursive;
 }
 
@@ -210,45 +215,97 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 
 .fa.fa-globe.thumbnails-icon		{
 	color: white;
-	font-size: 200px;
+	font-size: 170px;
 	display: block;
 }
 
 .fa.fa-money.thumbnails-icon		{
 	color: white;
-	font-size: 200px;
+	font-size: 170px;
 	display: block;
 }
 
 .fa.fa-clock-o.thumbnails-icon		{
 	color: white;
-	font-size: 200px;
+	font-size: 170px;
 	display: block;
 }
 
 .fa.fa-briefcase.thumbnails-icon		{
-	color: white;
-	font-size: 200px;
+	color: #292b2c!important;
+	font-size: 170px;
 	display: block;
 }
 
 .fa.fa-line-chart.thumbnails-icon		{
-	color: white;
-	font-size: 200px;
+	color: #292b2c!important;
+	font-size: 170px;
 	display: block;
 }
 
 .thumbnail-content	{
 	margin-top: 50px;
 	margin-bottom: 50px;
-	/*
-		border-style: solid;
-		border-width: 1px 0px 1px  0px;
-		border-color: #292b2c!important;	
-	*/
 }
 
 .footer-nav	{
 	background: #292b2c!important;
 	color: white;
+}
+
+.social-icon-list {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.social-icon	{
+	width: 34px;
+	height: 34px;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 30px;
+	padding:	1px;
+	color: #00CED1;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.social-icon:hover	{
+	color: #FEF65B;
+	display: inline-block;
+}
+
+.fa.fa-map-marker{
+	color: #00CED1;
+	display: inline-block;
+}
+
+.fa.fa-phone	{
+	color: #00CED1;
+	display: inline-block;
+}
+
+.fa.fa-envelope	{
+	color: #00CED1;
+	display: inline-block;
+}
+
+.footer-link	{
+	color: #00CED1;
+	display: inline-block;
+}
+
+.single	{
+	text-align: justify;
+}
+
+.about-us	{
+	text-align: justify;
+}
+
+.parallax-2 .tittle {
+	height: 100%
+	padding-top: 100px;
+	padding-bottom: 100px;
 }

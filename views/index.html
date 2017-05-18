@@ -2,10 +2,10 @@
 
 {% block content %}
     {%  include "templates/header.html"  %}
-    <div class="container-index ">
-	    <div class="parallax parallax-1 " id="home">
+    <div class="container-index">
+	    <div class="parallax parallax-1" id="home">
 	    	
-	    	<div class="authentication ">
+	    	<div class="authentication">
 	    		<!-- Tab Navs -->
 	    		<ul class="nav nav-tabs" role="tablist">
 					  <li class="nav-item">
@@ -19,23 +19,23 @@
 					<!-- Tab panes -->
 					<div class="tab-content padding-10">
 					  <div class="tab-pane active " id="newAccount" role="tabpanel">
-				  		<div class="form-group">
+				  		<div class="form-group datos-personales">
 						  	<label class="control-label" for="inputSuccess1">Datos personales</label>
 						  	<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Nombre (s)">
 							  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Apellidos">
 							</div>
-							<div class="form-group">
+							<div class="form-group datos-contacto">
 							  <label class="control-label" for="inputWarning1">Datos de contacto</label>
 							  <input type="text" class="form-control" id="inputWarning1" placeholder="Email
 							  ">
 							  <input type="text" class="form-control" id="inputWarning1" placeholder="Telefono
 							  ">
 							</div>
-							<div class="form-group">
+							<div class="form-group datos-ubicacion">
 							  <label class="control-label" for="inputError1">Datos de Ubicación</label>
 							  <input type="text" class="form-control" id="inputError1" placeholder="Codígo Postal">
 							</div>
-							<div class="has-error">
+							<div class="sumbit-box">
 							  <div class="checkbox text-center">
 							    <div class="btn btn-primary btn-createaccout-sumbit text-bold margin-top-20" id="landingPageCreateAccount"> 
 							    	Crear mi cuenta WashCar
@@ -46,7 +46,7 @@
 					  <div class="tab-pane" id="myBusiness" role="tabpanel">
 					  	<div class="container-fluid">
 							  <div class="row">
-						      <div class="col-xs-12 col-md-12 col-sm-12">
+						      <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
 										<label class="text-center text-bold text-invitation" >
 											Tienes un Auto-lavado
 										</label>
@@ -77,9 +77,9 @@
 
     <div class="serices-tab " id="services">
       <div class="row max-width padding-left-40 padding-right-40">
-      	<div class="col-md-12">
+      	<div class="col-md-12 col-lg-12">
       		<div class="row">
-      			<div class="col-xs-4 col-md-4 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">
+      			<div class="col-xs-4 col-md-4 col-sm-12 col-lg-4 padding-left-10 padding-right-10 thumbnail-content">
       				<dl class="dl-horizontal">
       					<i class="fa fa-globe thumbnails-icon"></i>
 							  <dt class="thumbnails-tittle">
@@ -88,18 +88,18 @@
 							  <dd class="thumbnails-text">Encuentra tu auto lavado mas cercano. Descarga nuestra app y visualiza cuales son las mejores opciones para lavar tu auto cerca de ti.</dd>
 							</dl>
       			</div>
-      			<div class="col-xs-4 col-md-4 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">	
+      			<div class="col-xs-12 col-md-4 col-lg-4 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">	
       				<dl class="dl-horizontal">
       					<i class="fa fa-money thumbnails-icon"></i>
 							  <dt class="thumbnails-tittle">
 							  	Encuentra el mejor precio
 							  </dt>
-							  <dd class="thumbnails-text">
+							  <dd class="thumbnails-text margin-top-20">
 							  	Descubre donde puedes ahorrar mas dinero al lavar tu auto.
 							  </dd>
 							</dl>
       			</div>
-      			<div class="col-xs-4 col-md-4 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">
+      			<div class="col-xs-12 col-md-4 col-lg-4 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">
       				<dl class="dl-horizontal">
       					<i class="fa fa-clock-o thumbnails-icon"></i>
 							  <dt class="thumbnails-tittle">
@@ -113,29 +113,35 @@
       </div>
     </div>
 
-    <div class="parallax parallax-2" id="servicesBusinessParallax"></div>
+    <div class="parallax parallax-2" id="servicesBusinessParallax">
+    	<div class="tittle">
+    		<h1> !Trabaja con nosotros! </h1>
+    	</div>
+    </div>
 
-		<div class="serices-tab " id="servicesBusiness">
+		<div class="serices-tab-business" id="servicesBusiness">
       <div class="row max-width padding-left-40 padding-right-40">
-      	<div class="col-md-12">
+      	<div class="col-md-12 col-lg-12">
       		<div class="row">
-      			<div class="col-xs-6 col-md-6 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">
+      			<div class="col-xs-12 col-lg-6 col-md-6 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">
       				<dl class="dl-horizontal">
       					<i class="fa fa-briefcase thumbnails-icon"></i>
 							  <dt class="thumbnails-tittle">
-							  	....
+							  	¡Da a conocer tu negocio!
 							  </dt>
-							  <dd class="thumbnails-text">.......</dd>
+							  <dd class="thumbnails-text">
+									En la actualidad las plataformas web y mobiles son las mejores formas de hacer que un negocio nuevo y no tan nuevo se de a conocer fácilmente. Nuestro equipo te espera subscríbete y hazle saber a la gente que estas ahí.
+							  </dd>
 							</dl>
       			</div>
-      			<div class="col-xs-6 col-md-6 col-sm-12 padding-left-40 padding-right-40 thumbnail-content">	
+      			<div class="col-xs-12 col-md-6 col-lg-6 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">	
       				<dl class="dl-horizontal">
       					<i class="fa fa-line-chart thumbnails-icon"></i>
 							  <dt class="thumbnails-tittle">
-							  	....
+							  	Haz crecer tu negocio.
 							  </dt>
 							  <dd class="thumbnails-text">
-							  	.......
+							  	Incrementa las ventas. Con nuestra aplicación puedes eliminar tiempos muertos y tener una mayor cantidad de ventas. También te ofrecemos una herramienta para una mejor administración.
 							  </dd>
 							</dl>
       			</div>
@@ -144,9 +150,82 @@
       </div>
     </div>
 
-    <div class="footer-nav">
-      <h1>Footer !</h1>
-      <p>...</p>
+    <div class="footer-nav padding-top-50">
+    	<div class="row max-width padding-right-40 padding-left-40">
+    		<div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+    			<div class="row">
+	    			<div class="col-sm-12 col-xs-12 col-md-8 col-lg-8">
+	    				<div class="row">
+	    					<div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 abount-us">
+	    						<div>
+			    					<h2 class="footer-title">About Us</h2>
+										<p>Somos una empresa dedicada a mejorar la comunicacion </p>
+									</div>
+									<div class="copyright hidden-sm hidden-xs">
+										<p>Copyrights &copy; 2017 <a href="http://nextbootstrap.com/" class="footer-link" title="">My CarWash.</a> All Right Reserved.</p>
+										<p>Developed By : <a href="http://sirseni.com/" class="footer-link" title="">Diego Macías</a></p>
+									</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="col-sm-12 col-xs-12 col-md-4 col-lg-4">
+	    				<div class="row">
+	    					<div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+	    						<h2 class="footer-title">Contact Info</h2>
+									<div class="single">
+										<i class="fa fa-map-marker display-inline"></i>
+										<p class="display-inline">&nbsp Aguascalientes, Aguascalientes México</p>
+									</div>	
+									<div class="single">
+										<i class="fa fa-phone display-inline"></i>
+										<p class="display-inline">&nbsp + 52-4492226190</p>
+									</div>
+
+									<div class="single">
+										<i class="fa fa-envelope display-inline"></i>
+										<p class="display-inline">&nbsp maciasjassso0hotmail.com</p>
+										<br>
+										<i class="fa fa-envelope display-inline"></i>
+										<p class="display-inline">&nbsp maciasjassso0gmail.com</p>
+									</div>
+			    				<div class=" row  social-icon-list">
+			    					<div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+			    						<div class="row">
+												<div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+													<table class="max-width text-align-center">
+														<tr>
+															<td class="text-align-center">
+																<div class="social-icon img-circle">
+																	<i class="fa fa-facebook"></i>
+																</div>
+															</td>
+															<td class="text-align-center">
+																<div class="social-icon img-circle">
+																<i class="fa fa-twitter"></i>
+																</div>
+															</td>
+															<td class="text-align-center">
+																<div class="social-icon img-circle">
+																<i class="fa fa-instagram"></i>
+																</div>
+															</td>
+															<td class="text-align-center">
+																<div class="social-icon img-circle">
+																<i class="fa fa-linkedin"></i>
+																</div>
+															</td>
+														</tr>
+													</table>						
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
     </div>
 
   </div>

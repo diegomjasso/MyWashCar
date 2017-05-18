@@ -1,5 +1,5 @@
 @media only screen and (min-width: 991px) {
-	.logo{
+	.logo	{
 		width:	50px;
 		height: 50px;
 		margin-left: 1em;
@@ -11,16 +11,72 @@
 	    margin-left: 1em;
 	}
 
-	.authentication {
-		margin:	40px;
-	}
-
 	.container-index	{
-		padding-top: 80px;
+		
 	}
 
 	.parallax-1	{
 		height: 110%;
 	}
 	
+	.serices-tab	{
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+
+	.serices-tab-business	{
+		padding-left: 200px;
+		padding-right: 200px;
+	}
+
+
+	@media only screen and (max-height: 990px) and (min-width: 991px)	{
+		.authentication {
+			margin-top:	150px;
+			width: 18em;
+			padding: 20px 15px 20px 15px;
+		}
+
+		.parallax-2 .tittle h1	{
+			font-size: 180px;
+		}
+	}
+
+	@media only screen and (min-height: 991px)	and	(min-width: 991px)	{	
+
+		.authentication {
+			margin-top:	200px;
+			width: 50em;
+			padding: 20px 15px 20px 15px;
+		}
+
+		.datos-personales	{
+			width: 50%;
+			display: inline-block;
+			float: left;
+			padding: 20px;
+		}
+
+		.datos-contacto	{
+			width: 50%;
+			display: inline-block;
+			float: right;
+			padding: 20px;
+		}
+
+		.datos-ubicacion	{
+			display: block;
+			margin-top: 20px;
+			padding: 20px;
+			display: inline-block;
+			text-align: justify;
+			width: 100%;
+		}
+
+		.parallax-2 .tittle h1	{
+			font-size: 220px;
+			padding-top: 250px;
+			padding-bottom: 250px;
+		}
+	}
 }
