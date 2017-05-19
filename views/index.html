@@ -2,154 +2,179 @@
 
 {% block content %}
     {%  include "templates/header.html"  %}
-    <div class="container-index">
-	    <div class="parallax parallax-1" id="home">
-			w    	
-	    	<div class="authentication">
-	    		<!-- Tab Navs -->
-	    		<ul class="nav nav-tabs" role="tablist">
-					  <li class="nav-item">
-					    <a class="nav-link active" data-toggle="tab" href="#newAccount" role="tab">Registrate</a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link" data-toggle="tab" href="#myBusiness" role="tab">Mi Negocio</a>
-					  </li>
-					</ul>
+    <div class="container-index max-height">
+	    <div class="parallax parallax-1 max-height" id="home">
+	    	<div class="row max-height">
+	    		<div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+	    			<div class="row max-height">
+	    				<div class="col-xs-12 col-sm-12 col-md-12- col-lg-12">
+	    					<div class="va-center home-info">
+	    						<h1 class="margin-bottom-10">Regístrate</h1>
+	    						<div class="band margin-bottom-10"></div>
+	    						<p class="margin-bottom-10">Encuentra la mejor opción para lavar tu auto. Para tu comodidad puedes buscarnos en nuestras diversas plataformas.
 
-					<!-- Tab panes -->
-					<div class="tab-content padding-10">
-					  <div class="tab-pane active " id="newAccount" role="tabpanel">
-				  		<div class="form-group datos-personales">
-						  	<label class="control-label" for="inputSuccess1">Datos personales</label>
-						  	<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Nombre (s)">
-							  <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Apellidos">
-							</div> 
-							<div class="form-group datos-contacto">
-							  <label class="control-label" for="inputWarning1">Datos de contacto</label>
-							  <input type="text" class="form-control" id="inputWarning1" placeholder="Email
-							  ">
-							  <input type="text" class="form-control" id="inputWarning1" placeholder="Telefono
-							  ">
-							</div>
-							<div class="form-group datos-ubicacion">
-							  <label class="control-label" for="inputError1">Datos de Ubicación</label>
-							  <input type="text" class="form-control" id="inputError1" placeholder="Codígo Postal">
-							</div>
-							<div class="sumbit-box">
-							  <div class="checkbox text-center">
-							    <div class="btn btn-primary btn-createaccout-sumbit text-bold margin-top-20" id="landingPageCreateAccount"> 
-							    	Crear mi cuenta CarWash
-							    </div>
-							  </div>
-							</div>
-					  </div>
-					  <div class="tab-pane" id="myBusiness" role="tabpanel">
-					  	<div class="container-fluid">
-							  <div class="row">
-						      <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
-										<label class="text-center text-bold text-invitation" >
-											Tienes un Auto-lavado
-										</label>
+	    						</p>
+								<h3 class="tag">Mejor Precio 	</h3>
+								<h3 class="tag">Servicios Especiales	</h3>
+								<h3 class="tag">Promociones 	</h3>
+								<h3 class="tag">Disponibilidad	</h3>
+								<h3 class="tag">Cercanía	</h3>
 
-										<label class="text-center text-bold text-invitation" >
-											¿Quieres mejorar tu negocio?
-										</label>
+	    					</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="col-md-5 col-lg-4 authentication-container">
+	    			<div class="row">
+	    				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				    		<div class="authentication">
+				    			<!-- Tab Navs -->
+				    			<ul class="nav nav-tabs" role="tablist">
+								  <li class="nav-item">
+								    <a class="nav-link active" data-toggle="tab" href="#newAccount" role="tab">Regístrate</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" data-toggle="tab" href="#myBusiness" role="tab">Mi Negocio</a>
+								  </li>
+								</ul>
 
-										<label class="text-center text-bold text-invitation" >
-											¿Necesitas mejor Administración?
-										</label>
-
-										<label class="text-center text-bold text-invitation" >
-											¡Tenemos la solución para ti! 
-										</label>
-
-										<div class="btn btn-primary btn-comenzar-sumbit text-bold margin-top-20" id="comenzarAhora">
-											¡Comenzar Ahora!
+								<!-- Tab panes -->
+								<div class="tab-content padding-10">
+									<div class="tab-pane active " id="newAccount" role="tabpanel">
+										<div class="form-group datos-personales">
+										  	<label class="control-label" for="inputSuccess1">Datos personales</label>
+										  	<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Nombre (s)">
+											<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Apellidos">
 										</div>
-						      </div>
-							  </div>
+										<div class="form-group datos-contacto">
+										  <label class="control-label" for="inputWarning1">Datos de contacto</label>
+										  <input type="text" class="form-control" id="inputWarning1" placeholder="Email
+										  ">
+										  <input type="text" class="form-control" id="inputWarning1" placeholder="Telefono
+										  ">
+										</div>
+										<div class="form-group datos-ubicacion">
+										  <label class="control-label" for="inputError1">Datos de Ubicación</label>
+										  <input type="text" class="form-control" id="inputError1" placeholder="Codígo Postal">
+										</div>
+										<div class="sumbit-box">
+										  <div class="checkbox text-center">
+										    <div class="btn btn-primary btn-createaccout-sumbit text-bold margin-top-20" id="landingPageCreateAccount"> 
+										    	Crear mi cuenta CarWash
+										    </div>
+										  </div>
+										</div>
+									</div>
+									<div class="tab-pane" id="myBusiness" role="tabpanel">
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-xs-12 col-md-12 col-lg-12 col-sm-12">
+													<label class="text-center text-bold text-invitation" >
+														Tienes un Auto-lavado
+													</label>
+
+													<label class="text-center text-bold text-invitation" >
+														¿Quieres mejorar tu negocio?
+													</label>
+
+													<label class="text-center text-bold text-invitation" >
+														¿Necesitas mejor Administración?
+													</label>
+
+													<label class="text-center text-bold text-invitation" >
+														¡Tenemos la solución para ti! 
+													</label>
+
+													<div class="btn btn-primary btn-comenzar-sumbit text-bold margin-top-20" id="comenzarAhora">
+														¡Comenzar Ahora!
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-					  </div>
+						</div>
 					</div>
-
-  		</div>
-    </div>
-
-    <div class="serices-tab " id="services">
-      <div class="row max-width padding-left-40 padding-right-40">
-      	<div class="col-md-12 col-lg-12">
-      		<div class="row">
-      			<div class="col-xs-4 col-md-4 col-sm-12 col-lg-4 padding-left-10 padding-right-10 thumbnail-content">
-      				<dl class="dl-horizontal left">
-      					<i class="fa fa-globe thumbnails-icon"></i>
-						<dt class="thumbnails-tittle">
-							Ubicacíon
-						</dt>
-						<dd class="thumbnails-text">Encuentra tu auto lavado mas cercano. Descarga nuestra app y visualiza cuales son las mejores opciones para lavar tu auto cerca de ti.</dd>
-					</dl>
-      			</div>
-      			<div class="col-xs-12 col-md-4 col-lg-4 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">	
-      				<dl class="dl-horizontal center">
-      					<i class="fa fa-money thumbnails-icon"></i>
-						<dt class="thumbnails-tittle">
-							Encuentra el mejor precio
-						</dt>
-						<dd class="thumbnails-text margin-top-20">
-							Descubre donde puedes ahorrar mas dinero al lavar tu auto.
-						</dd>
-					</dl>
-      			</div>
-      			<div class="col-xs-12 col-md-4 col-lg-4 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">
-      				<dl class="dl-horizontal right">
-      					<i class="fa fa-clock-o thumbnails-icon"></i>
-						<dt class="thumbnails-tittle">
-							No pierdas tu tiempo
-						</dt>
-						<dd class="thumbnails-text">
-							¿No quieres esperar en la fila del auto lavado?. Localiza el auto lavado con con la atención inmediata en tiempo real.
-						</dd>
-					</dl>
-      			</div>
-      		</div>
-      	</div>
-      </div>
-    </div>
-
-    <div class="parallax parallax-2" id="servicesBusinessParallax">
-    	<div class="tittle">
-    		<h1 class="success"> !Impulsa tu negocio! </h1>
+				</div>
+  			</div>
     	</div>
-    </div>
+
+	    <div class="serices-tab " id="services">
+	      <div class="row max-width padding-left-40 padding-right-40">
+	      	<div class="col-md-12 col-lg-12">
+	      		<div class="row">
+	      			<div class="col-xs-4 col-md-4 col-sm-12 col-lg-4 padding-left-10 padding-right-10 thumbnail-content">
+	      				<dl class="dl-horizontal left">
+	      					<i class="fa fa-globe thumbnails-icon"></i>
+							<dt class="thumbnails-tittle">
+								Ubicacíon
+							</dt>
+							<dd class="thumbnails-text">Encuentra tu auto lavado mas cercano. Descarga nuestra app y visualiza cuales son las mejores opciones para lavar tu auto cerca de ti.</dd>
+						</dl>
+	      			</div>
+	      			<div class="col-xs-12 col-md-4 col-lg-4 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">	
+	      				<dl class="dl-horizontal center">
+	      					<i class="fa fa-money thumbnails-icon"></i>
+							<dt class="thumbnails-tittle">
+								Encuentra el mejor precio
+							</dt>
+							<dd class="thumbnails-text margin-top-20">
+								Descubre donde puedes ahorrar mas dinero al lavar tu auto.
+							</dd>
+						</dl>
+	      			</div>
+	      			<div class="col-xs-12 col-md-4 col-lg-4 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">
+	      				<dl class="dl-horizontal right">
+	      					<i class="fa fa-clock-o thumbnails-icon"></i>
+							<dt class="thumbnails-tittle">
+								No pierdas tu tiempo
+							</dt>
+							<dd class="thumbnails-text">
+								¿No quieres esperar en la fila del auto lavado?. Localiza el auto lavado con con la atención inmediata en tiempo real.
+							</dd>
+						</dl>
+	      			</div>
+	      		</div>
+	      	</div>
+	      </div>
+	    </div>
+
+	    <div class="parallax parallax-2" id="servicesBusinessParallax">
+	    	<div class="tittle">
+	    		<h1 class="success"> !Impulsa tu negocio! </h1>
+	    	</div>
+	    </div>
 
 		<div class="serices-tab-business" id="servicesBusiness">
-      <div class="row max-width padding-left-40 padding-right-40">
-      	<div class="col-md-12 col-lg-12">
-      		<div class="row">
-      			<div class="col-xs-12 col-lg-6 col-md-6 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">
-      				<dl class="dl-horizontal left">
-      					<i class="fa fa-briefcase thumbnails-icon"></i>
-							  <dt class="thumbnails-tittle">
-							  	¡Da a conocer tu negocio!
-							  </dt>
-							  <dd class="thumbnails-text">
+			<div class="row max-width padding-left-40 padding-right-40">
+      		<div class="col-md-12 col-lg-12">
+	      		<div class="row">
+    	  			<div class="col-xs-12 col-lg-6 col-md-6 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">
+      					<dl class="dl-horizontal left">
+      						<i class="fa fa-briefcase thumbnails-icon"></i>
+								<dt class="thumbnails-tittle">
+									¡Da a conocer tu negocio!
+								</dt>
+								<dd class="thumbnails-text">
 									En la actualidad las plataformas web y mobiles son las mejores formas de hacer que un negocio nuevo y no tan nuevo se de a conocer fácilmente. Nuestro equipo te espera subscríbete y hazle saber a la gente que estas ahí.
-							  </dd>
-							</dl>
+							  	</dd>
+						</dl>
+      				</div>
+	      			<div class="col-xs-12 col-md-6 col-lg-6 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">
+	      				<dl class="dl-horizontal right">
+	      					<i class="fa fa-line-chart thumbnails-icon"></i>
+							<dt class="thumbnails-tittle">
+								Haz crecer tu negocio.
+							</dt>
+							<dd class="thumbnails-text">
+								Incrementa las ventas. Con nuestra aplicación puedes eliminar tiempos muertos y tener una mayor cantidad de ventas. También te ofrecemos una herramienta para una mejor administración.
+							</dd>
+						</dl>
+	      			</div>
       			</div>
-      			<div class="col-xs-12 col-md-6 col-lg-6 col-sm-12 padding-left-10 padding-right-10 thumbnail-content">	
-      				<dl class="dl-horizontal right">
-      					<i class="fa fa-line-chart thumbnails-icon"></i>
-							  <dt class="thumbnails-tittle">
-							  	Haz crecer tu negocio.
-							  </dt>
-							  <dd class="thumbnails-text">
-							  	Incrementa las ventas. Con nuestra aplicación puedes eliminar tiempos muertos y tener una mayor cantidad de ventas. También te ofrecemos una herramienta para una mejor administración.
-							  </dd>
-							</dl>
-      			</div>
-      		</div>
-      	</div>
-      </div>
+			</div>
+		</div>
     </div>
 
     <div class="footer-nav padding-top-50">
@@ -161,11 +186,11 @@
 	    					<div class="col-sm-12 col-md-12 col-xs-12 col-lg-12 abount-us">
 	    						<div>
 			    					<h2 class="footer-title">About Us</h2>
-										<p>Somos una empresa dedicada a mejorar la comunicacion </p>
+										<p class="text-justified">Somos una empresa dedicada a mejorar la comunicación de nuestros clientes haciendo que su rentabilidad sea mayor. El usuario en general se beneficia del nuestro sistema y de esta manera obtener un mejor servicio. </p>
 									</div>
-									<div class="copyright hidden-sm hidden-xs">
-										<p>Copyrights &copy; 2017 <a href="http://nextbootstrap.com/" class="footer-link" title="">My CarWash.</a> All Right Reserved.</p>
-										<p>Developed By : <a href="http://sirseni.com/" class="footer-link" title="">Diego Macías</a></p>
+									<div class="copyright hidden-sm hidden-xs  max-width margin-bottom-20">
+										<p class="text-justified">Copyrights &copy; 2017 <a href="" class="link display-inline" title="">My CarWash.</a> All Right Reserved.</p>
+										<p class="display-inline text-justified">Developed by:&nbsp <a href="" class="link " title="">Diego Macías & Rogelio Ortiz</a></p>
 									</div>
 	    					</div>
 	    				</div>

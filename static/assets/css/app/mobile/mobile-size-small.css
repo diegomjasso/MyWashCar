@@ -1,5 +1,9 @@
 /**  Mobile size Views  **/
 @media only screen and (max-width: 219px) {
+	.home-info {
+		margin-left: 30px;
+	}
+
 	.tittle-logo	{
 	    display: none;
 	}
@@ -20,9 +24,15 @@
 		padding: 20px 15px 20px 15px;
 	}
 
+	.authentication-container	{
+		display: none;
+	}
+
 	.parallax-2 .tittle h1	{
 		font-size: 25px;
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
+
+	.container-info
 }

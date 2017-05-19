@@ -1,4 +1,8 @@
 @media only screen and (min-width: 300px) and (max-width : 480px) {
+	.home-info {
+		margin-left: 30px;
+	}
+	
 	.tittle-logo	{
 	    display: none;
 	}
@@ -11,6 +15,10 @@
 		margin-top:	50px;
 		width: 18em;
 		padding: 20px 15px 20px 15px;
+		display: none;
+	}
+
+	.authentication-container	{
 		display: none;
 	}
 

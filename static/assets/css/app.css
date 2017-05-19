@@ -12,20 +12,25 @@
 /* Fonts */
 /*	@import url('fonts/Permanent_Marker/PermanentMarker.ttf'); */
 @font-face {
-    font-family: 'Gloria Hallelujah';
-    src: url('fonts/Gloria_Hallelujah/GloriaHallelujah.ttf');
+	font-family: 'Gloria Hallelujah';
+	src: url('fonts/Gloria_Hallelujah/GloriaHallelujah.ttf');
 }
 
 @font-face {
-    font-family: 'Indie Flower';
-    src: url('fonts/Indie_Flower/IndieFlower.ttf');
+	font-family: 'Indie Flower';
+	src: url('fonts/Indie_Flower/IndieFlower.ttf');
 }
 
 @font-face {
-    font-family: 'Clicker Script';
-    src: url('fonts/Clicker_Script/ClickerScript-Regular.ttf');
+	font-family: 'Clicker Script';
+	src: url('fonts/Clicker_Script/ClickerScript-Regular.ttf');
 }
 /** Helper Clesses CSS **/
+
+.text-justified	{
+	text-align: justify;
+}
+
 .text-align-center	{
 	text-align:	center;
 }
@@ -58,6 +63,16 @@
 	display:	inline-block;
 }
 
+.va-center	{
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+}
+
+.max-height {
+	height: 100%;
+}
+
 .logo	{
 	width:	50px;
 	height: 50px;
@@ -69,7 +84,6 @@
 }
 
 .parallax {
-
     /* Create the parallax scrolling effect */
     background-attachment:	fixed;
     background-position: center;
@@ -84,7 +98,6 @@
 }
 
 .parallax-1	{
-	text-align: right;
 	padding-right: 50px;
 	background-image: url('../images/cleaning-tyre.jpg');
 }
@@ -106,6 +119,7 @@ body, html {
 	border-color: #ddd;
 	border-width: 1px;
 	font-size: 16px;
+	float: right;
 }
 
 .container-index	{
@@ -300,6 +314,10 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	display: inline-block;
 }
 
+.link {
+	color: #00CED1;
+}
+
 .single	{
 	text-align: justify;
 }
@@ -313,4 +331,28 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	padding-top: 100px;
 	padding-bottom: 100px;
 	color: white;
+}
+
+.home-info	h1	{
+	font-size: 50px;
+	font-family: 'Clicker Script', cursive;
+	font-weight: bold;
+	color: white;
+}
+
+.home-info	p	{
+	color: white;
+	text-align: justify;
+}
+
+.band	{
+	height: 5px;
+	background: #00CED1;
+
+}
+
+.tag {
+	background: #00CED1;
+	padding: 5px;
+	margin-bottom: 3px;
 }

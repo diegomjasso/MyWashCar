@@ -35,10 +35,40 @@
 			display: inline-block; 
 	}
 
-	@media only screen and (max-height: 990px) and (min-width: 991px)	{
+	.home-info	{
+		margin-left: 150px;
+	}
 
+	.home-info	h1	{
+		font-family: 'Clicker Script', cursive;
+		font-weight: bold;
+		color: white;
+	}
+
+	.home-info	p	{
+		color: white;
+		width: 250px;
+		text-align: justify;
+	}
+
+	.band	{
+		width: 300px;
+		height: 5px;
+		background: #00CED1;
+	}
+
+	.tag {
+		background: #00CED1;
+		padding: 5px;
+		margin-bottom: 3px;
+		width: 350px;
+	}
+
+	@media only screen and (max-height: 990px) and (min-width: 991px)	{
 		.parallax-2 .tittle h1	{
 			font-size: 180px;
+			padding-top: 100px;
+			padding-bottom: 100px;
 		}
 	}
 

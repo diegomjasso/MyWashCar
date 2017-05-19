@@ -32,16 +32,66 @@
 	.parallax-1	{
 		height: 110%;
 	}
+
+
+	.home-info	h1	{
+		font-size: 50px;
+		font-family: 'Clicker Script', cursive;
+		font-weight: bold;
+		color: white;
+	}
+
+	.home-info	p	{
+		color: white;
+		width: 200px;
+		text-align: justify;
+	}
+
+	.band	{
+		width: 250px;
+		height: 5px;
+		background: #00CED1;
+
+	}
+
+	.tag {
+		background: #00CED1;
+		padding: 5px;
+		margin-bottom: 3px;
+		width: 300px;
+	}
 }
 
 @media only screen and (min-width: 481px) and (max-width : 767px) {
+	.home-info	{
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+
 	.authentication {
 		display: none;
 	}	
+
+	.authentication-container	{
+		display: none;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width : 990px) {
+	.home-info	{
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
 	.authentication {
-		display: inline-block;
+		display: inline;
 	}	
+
+	.authentication-container	{
+		display: inline;
+	}
+
+	.authentication-container	.row	{
+		text-align: right;
+	}
 }
