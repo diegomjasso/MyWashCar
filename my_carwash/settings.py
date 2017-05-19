@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'negocios.apps.NegociosConfig',
     'perfiles.apps.PerfilesConfig',
+    'ventas.apps.VentasConfig'
 ]
 
 MIDDLEWARE = [

@@ -15,10 +15,10 @@ class Carwash(models.Model):
 	class Meta:
 		verbose_name_plural = 'Carwash'
 	STATUS = (
-			(1, 'Activo'),
-			(2, 'Suspendido'),
-			(3, 'Eliminado'),
-			(4, 'Reactivado')
+			('1', 'Activo'),
+			('2', 'Suspendido'),
+			('3', 'Eliminado'),
+			('4', 'Reactivado')
 		)
 
 	id = models.AutoField(primary_key = True)
@@ -50,8 +50,9 @@ class Catalago_Servicios(models.Model):
 	id = models.AutoField(primary_key = True)
 	negocio = models.ForeignKey(Carwash, on_delete = models.CASCADE)
 	servicio = models.CharField(max_length = 140)
+	descripcion = models.TextField()
 	precio = models.DecimalField(max_digits = 5, decimal_places = 2)
 	fecha_registro = models.DateTimeField(default = timezone.now)
 
 	def __str__(self):
-		self.servicio
+		return self.servicio
