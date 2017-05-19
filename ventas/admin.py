@@ -9,7 +9,7 @@ class Orden_VentaAdmin(admin.ModelAdmin):
 
 @admin.register(Servicios_Adquiridos_Venta)
 class Servicios_Adquiridos_VentaAdmin(admin.ModelAdmin):
-	list_display = ('id_venta', 'carwash', 'id_servicio', 'precio_original', 'precio_final', 'cantidad')
+	list_display = ('id_venta', 'carwash', 'id_servicio', 'precio_original', 'precio_final', 'cantidad', 'fecha')
 	list_filter = ('id_venta', 'id_servicio__negocio', 'id_servicio')
 	exclude = ('precio_original', 'precio_final')
 
