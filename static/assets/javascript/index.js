@@ -2,7 +2,7 @@
 	var extenxionJS = '.js';
 	var sourceScripts = '../../static/assets/javascript/';
 	var scriptsList =	[
-
+							'app/dashboard'
 						];
 
 	for(var i = 0; i < scriptsList.length; i++){
@@ -21,21 +21,25 @@
 
 var setStyles = {
 	init: function	()	{
+		dashboard.init_map();
 		setStyles.fixPositionHomeInfo();
+		dashboard.fixMapHeiight();
 		$(window).resize(	function (){
-			//dashboard.fixMapHeiight();
+			dashboard.fixMapHeiight();
 			setStyles.fixPositionHomeInfo();
 		});
 	},
 	fixPositionHomeInfo: function () {
 		var authenticationObj = document.getElementsByClassName('authentication');
-		var heightAuthentication = authenticationObj[0].clientHeight;
-		var widthAuthentication = authenticationObj[0].clientWidth;
 		var homeInfoObj = document.getElementsByClassName('home-info');
-		var height = homeInfoObj[0].clientHeight;
+		if (	authenticationObj[0] != undefined || homeInfoObj[0] != undefined) {
+			var widthAuthentication = authenticationObj[0].clientWidth;
+			var heightAuthentication = authenticationObj[0].clientHeight;
+			var height = homeInfoObj[0].clientHeight;
 
-		$("#home-info").css(	"margin-top",	(-(height/2)));
-		$("#authentication").css(	"margin-top",	(-(heightAuthentication/2)))
-		$("#authentication").css(	"margin-left",	(-(widthAuthentication) - 40))
+			$("#home-info").css(	"margin-top",	(-(height/2)));
+			$("#authentication").css(	"margin-top",	(-(heightAuthentication/2)));
+			$("#authentication").css(	"margin-left",	(-(widthAuthentication) - 40));
+		};
 	}
 }
