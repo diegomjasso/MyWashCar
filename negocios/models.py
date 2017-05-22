@@ -38,7 +38,7 @@ class Carwash(models.Model):
 	fecha_registro = models.DateTimeField(default = timezone.now)
 	fecha_modificacion = models.DateTimeField(default = timezone.now)
 	status = models.CharField(max_length = 140, choices = STATUS)
-	logo = models.ImageField(upload_to = "static/images/logoCarwash/")
+	logo = models.ImageField(upload_to = "static/assets/images/logoCarwash/")
 	ubicacion =  GeopositionField()
 
 	def __str__(self):
