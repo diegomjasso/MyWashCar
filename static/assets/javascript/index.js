@@ -30,10 +30,12 @@ var setStyles = {
 	fixPositionHomeInfo: function () {
 		var authenticationObj = document.getElementsByClassName('authentication');
 		var heightAuthentication = authenticationObj[0].clientHeight;
+		var widthAuthentication = authenticationObj[0].clientWidth;
 		var homeInfoObj = document.getElementsByClassName('home-info');
 		var height = homeInfoObj[0].clientHeight;
 
 		$("#home-info").css(	"margin-top",	(-(height/2)));
 		$("#authentication").css(	"margin-top",	(-(heightAuthentication/2)))
+		$("#authentication").css(	"margin-left",	(-(widthAuthentication) - 40))
 	}
 }

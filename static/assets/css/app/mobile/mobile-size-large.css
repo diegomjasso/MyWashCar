@@ -45,7 +45,7 @@
 
 	.home-info	p	{
 		color: white;
-		width: 250px;
+		width: 300px;
 		text-align: justify;
 	}
 
@@ -64,6 +64,10 @@
 
 	.text-email	{
 		font-size: 12px;
+	}
+
+	.home-info-container {
+		background: rgba(0,0,0, 0.5);
 	}
 
 	@media only screen and (max-height: 990px) and (min-width: 991px)	{

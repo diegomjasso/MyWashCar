@@ -42,7 +42,7 @@
 
 	.home-info	p	{
 		color: white;
-		width: 200px;
+		width: 250px;
 		text-align: justify;
 	}
 
@@ -76,7 +76,12 @@
 	}	
 
 	.authentication-container	{
-		visibility: visible;
+		visibility: hidden;
+		display: none;
+	}
+
+	.home-info-container {
+		background: rgba(0,0,0, 0);
 	}
 }
 
@@ -88,10 +93,15 @@
 
 	.authentication {
 		display: inline;
-	}	
+	}
 
 	.authentication-container	{
 		visibility: visible;
+		display: block;
+	}
+
+	.home-info-container {
+		background: rgba(0,0,0, 0.5);
 	}
 
 	.authentication-container	.row	{

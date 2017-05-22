@@ -19,6 +19,7 @@
 
 	.authentication-container	{
 		visibility: hidden;
+		display: none;
 	}
 
 	.container-index	{
@@ -52,5 +53,9 @@
 
 	.text-email	{
 		font-size: 12px;
+	}
+
+	.home-info-container {
+		background: rgba(0,0,0, 0);
 	}
 }

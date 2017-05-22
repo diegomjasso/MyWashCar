@@ -124,7 +124,7 @@ body, html {
 	border-color: #ddd;
 	border-width: 1px;
 	font-size: 16px;
-	float: right;
+	left: 100%;
 }
 
 .container-index	{
