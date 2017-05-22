@@ -42,6 +42,6 @@
 	}
 
 	.authentication-container	{
-		display: none;
+		visibility: hidden;
 	}
 }

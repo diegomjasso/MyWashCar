@@ -25,7 +25,7 @@
 	}
 
 	.authentication-container	{
-		display: none;
+		visibility: hidden;
 	}
 
 	.parallax-2 .tittle h1	{
@@ -33,6 +33,4 @@
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
-
-	.container-info
 }

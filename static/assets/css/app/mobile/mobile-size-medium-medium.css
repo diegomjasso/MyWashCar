@@ -12,14 +12,13 @@
 	}
 
 	.authentication {
-		margin-top:	50px;
 		width: 18em;
 		padding: 20px 15px 20px 15px;
 		display: none;
 	}
 
 	.authentication-container	{
-		display: none;
+		visibility: hidden;
 	}
 
 	.container-index	{
@@ -49,5 +48,9 @@
 		font-size: 65px;
 		padding-top: 150px;
 		padding-bottom: 150px;
+	}
+
+	.text-email	{
+		font-size: 12px;
 	}
 }

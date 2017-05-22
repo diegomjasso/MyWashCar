@@ -10,7 +10,6 @@
 	}
 
 	.authentication {
-		margin-top:	130px;
 		width: 18em;
 		padding: 20px 15px 20px 15px;
 	}
@@ -60,6 +59,10 @@
 		margin-bottom: 3px;
 		width: 300px;
 	}
+
+	.text-email	{
+		font-size: 12px;
+	}
 }
 
 @media only screen and (min-width: 481px) and (max-width : 767px) {
@@ -73,7 +76,7 @@
 	}	
 
 	.authentication-container	{
-		display: none;
+		visibility: visible;
 	}
 }
 
@@ -88,7 +91,7 @@
 	}	
 
 	.authentication-container	{
-		display: inline;
+		visibility: visible;
 	}
 
 	.authentication-container	.row	{

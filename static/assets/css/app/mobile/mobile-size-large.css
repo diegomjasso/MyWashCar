@@ -29,10 +29,8 @@
 	}
 
 	.authentication {
-			margin-top:	150px;
-			width: 18em;
-			padding: 20px 15px 20px 15px;
-			display: inline-block; 
+		width: 18em;
+		padding: 20px 15px 20px 15px;
 	}
 
 	.home-info	{
@@ -62,6 +60,10 @@
 		padding: 5px;
 		margin-bottom: 3px;
 		width: 350px;
+	}
+
+	.text-email	{
+		font-size: 12px;
 	}
 
 	@media only screen and (max-height: 990px) and (min-width: 991px)	{

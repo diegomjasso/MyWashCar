@@ -22,11 +22,18 @@
 var setStyles = {
 	init: function	()	{
 		setStyles.fixPositionHomeInfo();
+		$(window).resize(	function (){
+			//dashboard.fixMapHeiight();
+			setStyles.fixPositionHomeInfo();
+		});
 	},
 	fixPositionHomeInfo: function () {
+		var authenticationObj = document.getElementsByClassName('authentication');
+		var heightAuthentication = authenticationObj[0].clientHeight;
 		var homeInfoObj = document.getElementsByClassName('home-info');
 		var height = homeInfoObj[0].clientHeight;
-		
-		$(".home-info").css(	"margin-top",	(-(height/2)))
+
+		$("#home-info").css(	"margin-top",	(-(height/2)));
+		$("#authentication").css(	"margin-top",	(-(heightAuthentication/2)))
 	}
 }
