@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
     {%  include "templates/header.html"  %}
     <div class="container-index max-height">
@@ -9,16 +9,18 @@
 	    			<div class="row max-height">
 	    				<div class="col-xs-12 col-sm-12 col-md-12- col-lg-12">
 	    					<div class="va-center home-info">
-	    						<h1 class="margin-bottom-10">Regístrate</h1>
+	    						<h1 class="margin-bottom-10">Enchula tu Carro</h1>
 	    						<div class="band margin-bottom-10"></div>
-	    						<p class="margin-bottom-10">Encuentra la mejor opción para lavar tu auto. Para tu comodidad puedes buscarnos en nuestras diversas plataformas.
-
+	    						<p class="margin-bottom-10">
+	    						Encuentra la mejor opción para lavar tu auto. Entra a <span class="">MyCarwash</span> para encontrar al instante auto lavados cerca de ti. Mira que servicios ofrecen, sus precios, horarios, disponibilidad y más. MyCarwash tambien esta disponible para iPhone y Android.
 	    						</p>
-								<h3 class="tag">Mejor Precio 	</h3>
+	    						<img src="{% static "assets/images/google_btn.png" %}">
+	    						<img src="{% static "assets/images/apple_btn.png" %}">
+								<!-- <h3 class="tag">Mejor Precio 	</h3>
 								<h3 class="tag">Servicios Especiales	</h3>
 								<h3 class="tag">Promociones 	</h3>
 								<h3 class="tag">Disponibilidad	</h3>
-								<h3 class="tag">Cercanía	</h3>
+								<h3 class="tag">Cercanía	</h3> -->
 
 	    					</div>
 	    				</div>
