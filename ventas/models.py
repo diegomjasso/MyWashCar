@@ -27,6 +27,7 @@ class Servicios_Adquiridos_Venta(models.Model):
 	precio_final = models.DecimalField(max_digits = 5, decimal_places = 2)
 	descuento = models.IntegerField(default = 0)
 	cantidad = models.IntegerField(default = 1)
+	fecha = models.DateTimeField(default = timezone.now)
 
 	def save(self, *args, **kwargs):
 		po = Catalago_Servicios.objects.get(pk=self.id_servicio.id)
