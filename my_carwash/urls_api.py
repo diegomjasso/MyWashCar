@@ -1,13 +1,11 @@
 from rest_framework import routers
 from django.conf.urls import url, include
+from negocios.viewsets import CarwashViewSet
 
 router = routers.DefaultRouter()
 
-# router.register(r'rutas', RutasViewSet)
-# router.register(r'corridas', CorridasViewSet)
-# router.register(r'catalogo_rutas', Catalogo_rutasViewSet)
-# router.register(r'coordenadas_rutas', Coordenadas_rutasViewSet)
-# router.register(r'coordenadas_corridas', Coordenadas_corridasViewSet)
+router.register(r'carwash', CarwashViewSet)
+
 
 urlpatterns = [
 	url(r'', include(router.urls))
