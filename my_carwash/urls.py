@@ -22,6 +22,7 @@ from .views import index
 urlpatterns = [
 	url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
 	url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
+    url(r'^dashboard/', include('dashboard.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', index, name='index'),
     url(r'^api/', include('my_carwash.urls_api')),
