@@ -73,8 +73,6 @@
 	@media only screen and (max-height: 990px) and (min-width: 991px)	{
 		.parallax-2 .tittle h1	{
 			font-size: 180px;
-			padding-top: 100px;
-			padding-bottom: 100px;
 		}
 	}
 
