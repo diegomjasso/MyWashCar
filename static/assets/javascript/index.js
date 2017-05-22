@@ -2,7 +2,7 @@
 	var extenxionJS = '.js';
 	var sourceScripts = '../../static/assets/javascript/';
 	var scriptsList =	[
-							'app/styles'
+
 						];
 
 	for(var i = 0; i < scriptsList.length; i++){
@@ -15,5 +15,18 @@
 
 	setTimeout( function()  {
     	setStyles.init();
-  	},	400);
+  	},	200);
 })();
+
+
+var setStyles = {
+	init: function	()	{
+		setStyles.fixPositionHomeInfo();
+	},
+	fixPositionHomeInfo: function () {
+		var homeInfoObj = document.getElementsByClassName('home-info');
+		var height = homeInfoObj[0].clientHeight;
+		
+		$(".home-info").css(	"margin-top",	(-(height/2)))
+	}
+}

@@ -327,7 +327,6 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 }
 
 .parallax-2 .tittle {
-	height: 100%
 	padding-top: 100px;
 	padding-bottom: 100px;
 	color: white;
@@ -355,4 +354,16 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	background: #00CED1;
 	padding: 5px;
 	margin-bottom: 3px;
+}
+
+@media only screen and (min-height: 700px)	{
+	.parallax	{
+		height: 100%;
+	}
+}
+
+@media only screen and (max-height: 699px)	{
+	.parallax	{
+		height: 700px;
+	}
 }
