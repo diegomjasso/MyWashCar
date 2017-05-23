@@ -59,36 +59,33 @@ var dashboard = {
   },
   map: {
     showMap: function ()  {
-      var corrida_inicio = {lat: 21.9589651, lng: -102.290256};
-      var corrida_final = {lat: 21.8497435, lng: -102.30098720000001};
-
       mapObject = document.getElementById('map');
-
       if (  mapObject != null) {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: corrida_inicio,
-          scrollwheel: false,
-          zoom: 7
-        });
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function (p) {
+            var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
+            /*var myLatLng = {lat: 21.9589651, lng: -102.290256};*/
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 13,
+              center: LatLng,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
 
-        var directionsDisplay = new google.maps.DirectionsRenderer({
-          map: map
-        });
+            var marker = new google.maps.Marker({
+              position: LatLng,
+              map: map,
+              title: "<div style = 'height:60px;width:200px'><b>Your location:</b><br />Latitude: " + p.coords.latitude + "<br />Longitude: " + p.coords.longitude
+            });
 
-        // Set destination, origin and travel mode.
-        var request = {
-          destination: corrida_final,
-          origin: corrida_inicio,
-          travelMode: 'DRIVING'
-        };
-
-        // Pass the directions request to the directions service.
-        var directionsService = new google.maps.DirectionsService();
-        directionsService.route(request, function(response, status) {
-          if (status == 'OK') {
-            directionsDisplay.setDirections(response);
-          }
-        });
+            google.maps.event.addListener(marker, "click", function (e) {
+                var infoWindow = new google.maps.InfoWindow();
+                infoWindow.setContent(marker.title);
+                infoWindow.open(map, marker);
+            });
+          });
+        } else {
+          alert('Geo Location feature is not supported in this browser.');
+        }
       }
     },
     fixMapHeiight: function ()  {
