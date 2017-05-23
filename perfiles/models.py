@@ -7,8 +7,14 @@ class Catalogo_Perfiles(models.Model):
 		verbose_name_plural='Catalago de Perfiles'
 
 	id = models.AutoField(primary_key = True)
-	nombre = models.CharField(max_length = 140)
 	user = models.OneToOneField(User, on_delete = models.CASCADE)
+	direccion = models.CharField(max_length = 140)
+	colonia = models.CharField(max_length = 140)
+	municipio = models.CharField(max_length = 140, default = 'Aguascalientes')
+	estado = models.CharField(max_length = 140, default = 'Aguascalientes')
+	pais = models.CharField(max_length = 140, default = 'Mexico')
+	telefono = models.CharField(max_length = 10)
+
 
 	def __str__(self):
-		return self.nombre
+		return self.user.username

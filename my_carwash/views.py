@@ -8,7 +8,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView, View
-from .forms import CreateUserForm, LoginUserForm
+from .forms import CreateUserForm, LoginUserForm, EditUserForm, EditPerfilForm
+from perfiles.models import Catalogo_Perfiles
 
 class IndexClass(CreateView):
 	success_url = reverse_lazy('dashboard:dashboard')
@@ -64,4 +65,29 @@ def logout(request):
 
 def error_404(request):
 	return render(request, 'error_404.html', {})
+
+@login_required(login_url = 'login')
+def edit_account(request):
+	form_perfil = EditPerfilForm( request.POST or None, instance = user_instance(request.user) )
+	form_user = EditUserForm(request.POST or None, instance = request.user)
+
+	if request.method == 'POST':
+		if form_perfil.is_valid() and form_user.is_valid():
+			form_perfil.save()
+			form_user.save()
+			messages.success(request, 'Datos actualizados')
+
+	context = {
+		'form_perfil' : form_perfil,
+		'form_user' : form_user
+	}
+
+	return render(request, 'edit_account.html', context)
+
+def user_instance(user):
+	try:
+		return user.perfil
+	except:
+		return  Catalogo_Perfiles(user = user)
+		
 

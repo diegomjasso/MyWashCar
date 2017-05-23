@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
+from perfiles.models import Catalogo_Perfiles
 
 def must_be_gt(value_password):
 	if len(value_password) < 5:
@@ -32,5 +33,26 @@ class LoginUserForm(forms.Form):
 
 	def __init__(self, *args, **kwargs):
 		super(LoginUserForm, self).__init__(*args, **kwargs)
-		self.fields['username'].widget.attrs.update({'class' : 'username_login', 'placeholder' : 'Username'})
-		self.fields['password'].widget.attrs.update({'class' : 'password_login', 'placeholder' : 'Contraseña'})
+		self.fields['username'].widget.attrs.update({'class' : 'form-control', 'placeholder' : 'Username'})
+		self.fields['password'].widget.attrs.update({'class' : 'form-control', 'placeholder' : 'Contraseña'})
+
+class EditUserForm(forms.ModelForm):
+	username = forms.CharField(max_length = 20)
+	first_name = forms.CharField(max_length = 20)
+	last_name = forms.CharField(max_length = 20)
+	email = forms.CharField()
+
+	def clean_email(self):
+		email = self.cleaned_data.get('email')
+		if User.objects.filter(email=email).exclude(pk = self.instance.id).count():
+			raise forms.ValidationError('El email ya existe')
+		return email
+
+	class Meta:
+		model = User
+		fields = ('username', 'email', 'first_name', 'last_name')
+
+class EditPerfilForm(forms.ModelForm):
+	class Meta:
+		model = Catalogo_Perfiles
+		fields = ('direccion', 'colonia', 'municipio', 'estado', 'pais', 'telefono')

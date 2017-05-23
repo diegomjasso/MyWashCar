@@ -18,7 +18,7 @@ from django.conf.urls import url,	include
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
 from django.contrib import admin
-from .views import IndexClass, LoginClass, logout, login
+from .views import edit_account, IndexClass, LoginClass, logout, login
 
 urlpatterns = [
 	url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^dashboard/', include('dashboard.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', IndexClass.as_view(), name='index'),
+    url(r'^edit_account/', edit_account, name='edit_account'),
     url(r'^logout/', logout, name='logout'),
     url(r'^login/', LoginClass.as_view(), name='login'),
     url(r'^api/', include('my_carwash.urls_api')),

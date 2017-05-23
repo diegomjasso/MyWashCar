@@ -10,15 +10,18 @@
 			
 			{% for field in form %}
 				<div class="form-group">
+				 	<div class="input-group">
+
 						{% if field.errors %}
 							{{ field.errors }}
 						{% endif %}
 						{% if field.label == 'Username' %}
-							<i class="fa fa-user" aria-hidden="true"></i>
+							<div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></div>
 						{% elif field.label == 'Password' %}
-							<i class="fa fa-lock" aria-hidden="true"></i>
+							<div class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></div>
 						{% endif %}
 						{{ field }}
+					</div>
 				</div>
 			{% endfor %}
 
