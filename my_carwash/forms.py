@@ -25,3 +25,12 @@ class CreateUserForm(forms.ModelForm):
 	class Meta:
 		model = User
 		fields = ('username', 'password', 'email')
+
+class LoginUserForm(forms.Form):
+	username = forms.CharField(max_length = 20)
+	password = forms.CharField(max_length = 20, widget = forms.PasswordInput())
+
+	def __init__(self, *args, **kwargs):
+		super(LoginUserForm, self).__init__(*args, **kwargs)
+		self.fields['username'].widget.attrs.update({'class' : 'username_login', 'placeholder' : 'Username'})
+		self.fields['password'].widget.attrs.update({'class' : 'password_login', 'placeholder' : 'Contraseña'})

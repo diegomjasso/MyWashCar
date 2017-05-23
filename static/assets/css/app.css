@@ -32,7 +32,7 @@
 }
 
 .errorlist {
-	font-size: 10px !important;
+	font-size: 12px !important;
 	color: red;
 	text-align: left !important;
 }
@@ -82,6 +82,10 @@
 
 .max-height {
 	height: 100%;
+}
+
+#myModal {
+	top: 100px;
 }
 
 .logo	{

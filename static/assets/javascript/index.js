@@ -15,6 +15,7 @@
 
 	setTimeout( function()  {
     	setStyles.init();
+    	loadModal();
   	},	200);
 })();
 
@@ -22,8 +23,7 @@
 var setStyles = {
 	init: function	()	{
 		setStyles.fixPositionHomeInfo();
-		dashboard.init_map();
-		dashboard.fixMapHeiight();
+
 
 		$(window).resize(	function (){
 			dashboard.fixMapHeiight();
@@ -44,4 +44,31 @@ var setStyles = {
 			$("#authentication").css(	"margin-left",	(-(widthAuthentication) - 40));
 		};
 	}
+}
+
+var app = {
+	loadModal: function()	{
+		var $contenedorModal = $('#myModal');
+	    var urlModal         = $(this).attr("href");
+	    var idModal          = $(this).data("idmodal");
+	 
+	    $contenedorModal.load(urlModal + ' ' + idModal , function(response) {
+	    $(this).modal({backdrop: "static"});
+	    });	
+	}	
+} 
+var loadModal = function() {
+	$('.btnModal').on("click", function(event) {
+	    event.preventDefault();
+
+	   
+	 
+	    var $contenedorModal = $('#myModal');
+	    var urlModal         = $(this).attr("href");
+	    var idModal          = $(this).data("idmodal");
+	 
+	    $contenedorModal.load(urlModal + ' ' + idModal , function(response) {
+	    $(this).modal({backdrop: "static"});
+	    });
+	});
 }

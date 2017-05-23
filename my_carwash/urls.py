@@ -16,17 +16,18 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import url,	include
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 from django.contrib import admin
-from .views import IndexClass
+from .views import IndexClass, LoginClass, logout, login
 
 urlpatterns = [
 	url(r'^jet/', include('jet.urls', 'jet')),  # Django JET URLS
 	url(r'^jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),  # Django JET dashboard URLS
     url(r'^dashboard/', include('dashboard.urls')),
     url(r'^admin/', include(admin.site.urls)),
-   # url(r'^login/', CreateUserClass.as_view(), name='login'),
-   # url(r'^register/', index, name='register'),
     url(r'^$', IndexClass.as_view(), name='index'),
+    url(r'^logout/', logout, name='logout'),
+    url(r'^login/', LoginClass.as_view(), name='login'),
     url(r'^api/', include('my_carwash.urls_api')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
