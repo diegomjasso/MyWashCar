@@ -390,18 +390,74 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	width:100%;
 }
 
-.map-content	{
+.map-content-closed	{
+	margin-left: 250px;
+}
+
+.map-content-opened	{
+	margin-left: 15px;
 }
 
 .side-dashboard	{
-	float: left;
 	position: absolute;
     z-index: 1;
-    float: left;
-    background: cadetblue;
-    padding: 15px;
-    width: 200px;
+    background: #068fb9;
+    width: 250px;
     height: 100%;
+}
+
+.side-dashboard-opened	{
+	position: absolute;
+    z-index: 1;
+    background: #068fb9;
+    width: 250px;
+    height: 100%;
+}
+
+.side-dashboard-closed	{
+	position: absolute;
+    z-index: 1;
+    background: #068fb9;
+    width: 15px;
+    height: 100%;
+}
+
+.side-dashboard-container-opened	{
+	position: fixed;
+	padding: 10px;
+	display: initial;
+}
+
+.side-dashboard-container-closed	{
+	display:  none;
+}
+
+.side-dashboard-lash-close	{
+	float: right;
+    z-index: 1;
+    background: #037294;
+    width: 15px;
+    height: 100%;
+    top: 0px;
+}
+
+.side-dashboard-lash-close:hover	{
+	cursor: pointer;
+	background: #055a74;
+}
+
+.side-dashboard-lash-close:active	{
+	cursor: pointer;
+	background: #064c62;
+}
+
+#direction-icnon-sidelash	{
+	color: white;
+	font-size: 20px;
+	top: 50%;
+	margin-top: -10px;
+	position: absolute;
+	margin-left: 1px;
 }
 
 @media only screen and (min-height: 700px)	{

@@ -1,5 +1,5 @@
 (function(){
-	var extenxionJS = '.js';
+	/*var extenxionJS = '.js';
 	var sourceScripts = '../../static/assets/javascript/';
 	var scriptsList =	[
 							'app/dashboard'
@@ -12,7 +12,7 @@
 		scriptTagHTML.src = sourceScripts + scriptsList[i] + extenxionJS;
 		(document.getElementsByTagName('HEAD')[0]||document.body).appendChild(scriptTagHTML);
 	};
-
+*/
 	setTimeout( function()  {
     	setStyles.init();
     	loadModal();
@@ -23,17 +23,22 @@
 var setStyles = {
 	init: function	()	{
 		setStyles.fixPositionHomeInfo();
+<<<<<<< HEAD
 
+=======
+		dashboard.init();
+		dashboard.map.fixMapHeiight();
+>>>>>>> 6fb0d4cbd6decf6f6224018ecf1a81fd13bf5e3e
 
 		$(window).resize(	function (){
-			dashboard.fixMapHeiight();
+			dashboard.map.fixMapHeiight();
 			setStyles.fixPositionHomeInfo();
 		});
 	},
 	fixPositionHomeInfo: function () {
 		var authenticationObj = document.getElementsByClassName('authentication');
 		var homeInfoObj = document.getElementsByClassName('home-info');
-		
+
 		if (	authenticationObj[0] != undefined || homeInfoObj[0] != undefined) {
 			var widthAuthentication = authenticationObj[0].clientWidth;
 			var heightAuthentication = authenticationObj[0].clientHeight;
