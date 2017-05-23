@@ -1,18 +1,5 @@
 (function(){
-	/*var extenxionJS = '.js';
-	var sourceScripts = '../../static/assets/javascript/';
-	var scriptsList =	[
-							'app/dashboard'
-						];
 
-	for(var i = 0; i < scriptsList.length; i++){
-		var scriptTagHTML = document.createElement('script');
-		scriptTagHTML.type ='text/javascript';
-		scriptTagHTML.async = false;
-		scriptTagHTML.src = sourceScripts + scriptsList[i] + extenxionJS;
-		(document.getElementsByTagName('HEAD')[0]||document.body).appendChild(scriptTagHTML);
-	};
-*/
 	setTimeout( function()  {
     	setStyles.init();
     	loadModal();
@@ -23,12 +10,10 @@
 var setStyles = {
 	init: function	()	{
 		setStyles.fixPositionHomeInfo();
-<<<<<<< HEAD
 
-=======
 		dashboard.init();
 		dashboard.map.fixMapHeiight();
->>>>>>> 6fb0d4cbd6decf6f6224018ecf1a81fd13bf5e3e
+
 
 		$(window).resize(	function (){
 			dashboard.map.fixMapHeiight();
@@ -51,17 +36,6 @@ var setStyles = {
 	}
 }
 
-var app = {
-	loadModal: function()	{
-		var $contenedorModal = $('#myModal');
-	    var urlModal         = $(this).attr("href");
-	    var idModal          = $(this).data("idmodal");
-	 
-	    $contenedorModal.load(urlModal + ' ' + idModal , function(response) {
-	    $(this).modal({backdrop: "static"});
-	    });	
-	}	
-} 
 var loadModal = function() {
 	$('.btnModal').on("click", function(event) {
 	    event.preventDefault();
