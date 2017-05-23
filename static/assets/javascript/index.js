@@ -21,9 +21,10 @@
 
 var setStyles = {
 	init: function	()	{
-		dashboard.init_map();
 		setStyles.fixPositionHomeInfo();
+		dashboard.init_map();
 		dashboard.fixMapHeiight();
+
 		$(window).resize(	function (){
 			dashboard.fixMapHeiight();
 			setStyles.fixPositionHomeInfo();
@@ -32,6 +33,7 @@ var setStyles = {
 	fixPositionHomeInfo: function () {
 		var authenticationObj = document.getElementsByClassName('authentication');
 		var homeInfoObj = document.getElementsByClassName('home-info');
+		
 		if (	authenticationObj[0] != undefined || homeInfoObj[0] != undefined) {
 			var widthAuthentication = authenticationObj[0].clientWidth;
 			var heightAuthentication = authenticationObj[0].clientHeight;

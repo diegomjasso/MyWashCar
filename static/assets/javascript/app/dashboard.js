@@ -1,36 +1,39 @@
 var dashboard = {
 	test: function ()	{
-		console.log("Entra al dashboard");
+		console.log("Load dashboard script");
 	},
 	init_map: function ()	{
 		var corrida_inicio = {lat: 21.9589651, lng: -102.290256};
     var corrida_final = {lat: 21.8497435, lng: -102.30098720000001};
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: corrida_inicio,
-      scrollwheel: false,
-      zoom: 7
-    });
+    mapObject = document.getElementById('map');
 
-    var directionsDisplay = new google.maps.DirectionsRenderer({
-      map: map
-    });
+    if (  mapObject != null) {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: corrida_inicio,
+        scrollwheel: false,
+        zoom: 7
+      });
 
-    // Set destination, origin and travel mode.
-    var request = {
-      destination: corrida_final,
-      origin: corrida_inicio,
-      travelMode: 'DRIVING'
-    };
+      var directionsDisplay = new google.maps.DirectionsRenderer({
+        map: map
+      });
 
-    // Pass the directions request to the directions service.
-    var directionsService = new google.maps.DirectionsService();
-    directionsService.route(request, function(response, status) {
-      if (status == 'OK') {
-        // Display the route on the map.
-        directionsDisplay.setDirections(response);
-      }
-    });
+      // Set destination, origin and travel mode.
+      var request = {
+        destination: corrida_final,
+        origin: corrida_inicio,
+        travelMode: 'DRIVING'
+      };
+
+      // Pass the directions request to the directions service.
+      var directionsService = new google.maps.DirectionsService();
+      directionsService.route(request, function(response, status) {
+        if (status == 'OK') {
+          directionsDisplay.setDirections(response);
+        }
+      });
+    }
 	},
 	fixMapHeiight: function	()	{
     var windowsHeight = $( window ).height();

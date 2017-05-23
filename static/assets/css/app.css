@@ -375,9 +375,23 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	background:none!important
 }
 
-#map	{
+.map	{
 	height:0px;
 	width:100%;
+}
+
+.map-content	{
+}
+
+.side-dashboard	{
+	float: left;
+	position: absolute;
+    z-index: 1;
+    float: left;
+    background: cadetblue;
+    padding: 15px;
+    width: 200px;
+    height: 100%;
 }
 
 @media only screen and (min-height: 700px)	{
