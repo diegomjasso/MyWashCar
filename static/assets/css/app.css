@@ -31,6 +31,12 @@
 	text-align: justify;
 }
 
+.errorlist {
+	font-size: 10px !important;
+	color: red;
+	text-align: left !important;
+}
+
 .text-align-center	{
 	text-align:	center;
 }

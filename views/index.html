@@ -43,28 +43,31 @@
 								<!-- Tab panes -->
 								<div class="tab-content padding-10">
 									<div class="tab-pane active " id="newAccount" role="tabpanel">
+								
+										<form method="post" action="">
+											{% csrf_token %}
+											<div class="form-group datos-personales">
+											  	<label class="control-label" for="inputSuccess1">Datos de Usuario</label>
+											</div>
+										 {# {{ form }} #}	
+											{% for field in form %}
+												<div class="form-group ">
+													{% if field.label == 'Username' %}
+													{% elif field.label == 'Password' %}
+													{% elif field.label == 'Email' %}
+													{% endif %}
+													{{ field }}
+													{% if field.errors %}
+														{{ field.errors }}
+													{% endif %}			
+
+												</div>
+											{% endfor %}
+											<button type="submit" class="btn btn-success" name="action">Registrarse
+										  </button>
+										</form>
 										<div class="form-group datos-personales">
-										  	<label class="control-label" for="inputSuccess1">Datos personales</label>
-										  	<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Nombre (s)">
-											<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2" placeholder="Apellidos">
-										</div>
-										<div class="form-group datos-contacto">
-										  <label class="control-label" for="inputWarning1">Datos de contacto</label>
-										  <input type="text" class="form-control" id="inputWarning1" placeholder="Email
-										  ">
-										  <input type="text" class="form-control" id="inputWarning1" placeholder="Telefono
-										  ">
-										</div>
-										<div class="form-group datos-ubicacion">
-										  <label class="control-label" for="inputError1">Datos de Ubicación</label>
-										  <input type="text" class="form-control" id="inputError1" placeholder="Codígo Postal">
-										</div>
-										<div class="sumbit-box">
-										  <div class="checkbox text-center">
-										    <div class="btn btn-primary btn-createaccout-sumbit text-bold margin-top-20" id="landingPageCreateAccount"> 
-										    	Crear mi cuenta CarWash
-										    </div>
-										  </div>
+										  	<label class="control-label" for="">¿Ya tienes una cuenta? <a href="">Inicia Sesión</a></label>
 										</div>
 									</div>
 									<div class="tab-pane" id="myBusiness" role="tabpanel">
