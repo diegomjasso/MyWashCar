@@ -376,6 +376,16 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
     height: 45px;
 }
 
+#gmap_canvas img	{
+	max-width:none!important;
+	background:none!important
+}
+
+#map	{
+	height:0px;
+	width:100%;
+}
+
 @media only screen and (min-height: 700px)	{
 	.parallax	{
 		height: 100%;
