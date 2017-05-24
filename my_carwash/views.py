@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
+from django.contrib import messages
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.contrib.auth import logout as logout_django
@@ -68,7 +69,7 @@ def error_404(request):
 
 @login_required(login_url = 'login')
 def edit_account(request):
-	form_perfil = EditPerfilForm( request.POST or None, instance = user_instance(request.user) )
+	form_perfil = EditPerfilForm( request.POST or None, instance = perfil_instance(request.user) )
 	form_user = EditUserForm(request.POST or None, instance = request.user)
 
 	if request.method == 'POST':
@@ -84,10 +85,12 @@ def edit_account(request):
 
 	return render(request, 'edit_account.html', context)
 
-def user_instance(user):
+def perfil_instance(user):
 	try:
+		print(1)
 		return user.perfil
 	except:
+		print(2)
 		return  Catalogo_Perfiles(user = user)
 		
 
