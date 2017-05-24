@@ -38,8 +38,6 @@ class LoginUserForm(forms.Form):
 
 class EditUserForm(forms.ModelForm):
 	username = forms.CharField(max_length = 20)
-	first_name = forms.CharField(max_length = 20)
-	last_name = forms.CharField(max_length = 20)
 	email = forms.CharField()
 
 	def clean_email(self):

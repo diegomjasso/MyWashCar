@@ -87,10 +87,8 @@ def edit_account(request):
 
 def perfil_instance(user):
 	try:
-		print(1)
-		return user.perfil
+		return user
 	except:
-		print(2)
 		return  Catalogo_Perfiles(user = user)
 		
 
