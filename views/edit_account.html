@@ -1,0 +1,12 @@
+<h1>PUTOS</h1>
+<div class="class_container_form">
+		<form method="post" action="">
+			{% csrf_token %}
+
+			{% include "includes/_forms.html" with form=form_user %}
+			{% include "includes/_forms.html" with form=form_perfil %}		
+
+			<button class="" type="submit" name="action">Actualizar
+		  </button>
+		</form>
+	</div>
