@@ -9,7 +9,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView, View
-from .forms import CreateUserForm, LoginUserForm, EditUserForm, EditPerfilForm
+from .forms import CreateUserForm, LoginUserForm, EditUserForm, EditPerfilForm, EditUserPasswordForm
 from perfiles.models import Perfil_Usuario
 
 class IndexClass(CreateView):
@@ -90,5 +90,29 @@ def perfil_instance(user):
 		return user.perfil_usuario
 	except:
 		return Perfil_Usuario(user = user)
+
+@login_required(login_url = 'login')
+def edit_user_password(request):
+	form = EditUserPasswordForm(request.POST or None)
+
+	if request.method == 'POST':
+		if form.is_valid():
+			current_password = form.cleaned_data['password']
+			new_password = form.cleaned_data['new_password']
+
+			if authenticate(username = request.user.username, password = current_password ):
+				request.user.set_password(new_password)
+				request.user.save()
+
+				update_session_auth_hash(request, request.user)
+				message = "Password ha sido actualizado"
+				messages.success(request, 'El password fue actualizado :)')
+			else:
+				messages.error(request, 'No fue posible actualizar el password')
+
+	data = {
+		'form' : form
+	}
+	return render(request, 'edit_user_password.html', data)
 		
 

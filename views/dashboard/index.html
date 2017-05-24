@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 	<div class="dashboard-content">
+<<<<<<< HEAD
 		<div class="side-dashboard-opened" id="side-dashboard">
 			<div class="side-dashboard-container-opened max-width" id="side-dashboard-container">
 				<!-- <a href="{% url 'edit_account' %}">Ajustes de Cuenta</a>
@@ -13,6 +14,13 @@
 					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 					</div>
 				</div>
+=======
+		<div class="side-dashboard-closed" id="side-dashboard">
+			<div class="side-dashboard-container-closed" id="side-dashboard-container">
+				<a href="{% url 'edit_account' %}">Ajustes de Cuenta</a>
+				<a href="{% url 'edit_user_password' %}">Cambiar Contraseña</a>
+				<a href="{% url 'logout' %}">Salir</a>
+>>>>>>> f2aaccc921bbea91cc87ef54a3e1711127a8c5e4
 			</div>
 			<div class="side-dashboard-lash" id="side-dashboard-lash" onclick="dashboard.ui.manageSide();">
 				<i class="fa fa-angle-double-right" id="direction-icnon-sidelash" aria-hidden="true"></i>
