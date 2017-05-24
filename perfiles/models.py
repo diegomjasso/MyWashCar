@@ -14,6 +14,7 @@ class Catalogo_Perfiles(models.Model):
 	estado = models.CharField(max_length = 140, default = 'Aguascalientes')
 	pais = models.CharField(max_length = 140, default = 'Mexico')
 	telefono = models.CharField(max_length = 10)
+	avatar = models.ImageField(upload_to = 'static/assets/images/avatars/', blank = True, null = True)
 
 
 	def __str__(self):
