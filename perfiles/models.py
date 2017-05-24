@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class Catalogo_Perfiles(models.Model):
+class Perfil_Usuario(models.Model):
 	class Meta:
-		verbose_name_plural='Catalago de Perfiles'
+		verbose_name_plural="Perfil del Usuario"
 
 	id = models.AutoField(primary_key = True)
 	user = models.OneToOneField(User, on_delete = models.CASCADE)

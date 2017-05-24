@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from perfiles.models import Catalogo_Perfiles
+from perfiles.models import Perfil_Usuario
 
 def must_be_gt(value_password):
 	if len(value_password) < 5:
@@ -52,5 +52,5 @@ class EditUserForm(forms.ModelForm):
 
 class EditPerfilForm(forms.ModelForm):
 	class Meta:
-		model = Catalogo_Perfiles
+		model = Perfil_Usuario
 		fields = ('direccion', 'colonia', 'municipio', 'estado', 'pais', 'telefono')

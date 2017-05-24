@@ -1,7 +1,7 @@
 from rest_framework import viewsets
-from .serializers import PerfileSerializer
-from .models import Catalogo_Perfiles
+from django.contrib.auth.models import User
+from .serializers import UserSerializer
 
 class PerfilViewSet(viewsets.ModelViewSet):
-	queryset = Catalogo_Perfiles.objects.all()
-	serializer_class = PerfileSerializer
+	queryset = User.objects.all()
+	serializer_class = UserSerializer
