@@ -8,7 +8,6 @@ router = routers.DefaultRouter()
 router.register(r'carwash', CarwashViewSet)
 router.register(r'perfil_usuarios', PerfilViewSet)
 
-
 urlpatterns = [
 	url(r'', include(router.urls))
 ]

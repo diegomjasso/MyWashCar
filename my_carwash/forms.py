@@ -54,3 +54,16 @@ class EditPerfilForm(forms.ModelForm):
 	class Meta:
 		model = Perfil_Usuario
 		fields = ('direccion', 'colonia', 'municipio', 'estado', 'pais', 'telefono')
+
+class EditUserPasswordForm(forms.Form):
+	password = forms.CharField(max_length = 20, widget = forms.PasswordInput())
+	new_password = forms.CharField(max_length = 20, widget = forms.PasswordInput(), validators = [must_be_gt])
+	repeat_password = forms.CharField(max_length = 20, widget = forms.PasswordInput())
+
+	def clean(self):
+		clean_data = super(EditUserPasswordForm, self).clean()
+		password1 = clean_data['new_password']
+		password2 = clean_data['repeat_password']
+
+		if password1 != password2:
+			raise forms.ValidationError('Las contraseñas no coinciden')
