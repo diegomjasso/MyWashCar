@@ -10,20 +10,6 @@ var dashboard = {
     dashboard.ui.closeSide();
   },
   ui: {
-    /*
-        Classes
-
-        --
-        .map-content-closed
-        .map-content-opened
-
-        .side-dashboard-container-opened
-        .side-dashboard-container-closed
-
-        .side-dashboard-opened
-        .side-dashboard-closed
-
-    */
     sideStatus:  true,
     manageSide: function()  {
       if (dashboard.ui.sideStatus == false) {
@@ -56,45 +42,46 @@ var dashboard = {
     }
   },
   map: {
-    carWashPoints: [
-        ['Bondi Beach', -33.890542, 151.274856, 4],
-        ['Coogee Beach', -33.923036, 151.259052, 5],
-        ['Cronulla Beach', -34.028249, 151.157507, 3],
-        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-        ['Maroubra Beach', -33.950198, 151.259302, 1]
-      ],
+    carWashPoints: [],
     showMap: function ()  {
+      var LatLng = {lat: 21.8853, lng:- 102.2916};
       mapObject = document.getElementById('map');
       if (  mapObject != null) {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function (p) {
-            var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
+            /*var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);*/
+            dashboard.map.setMap( LatLng);
           });
         } else {
-          var LatLng = {lat: 21.9589651, lng: -102.290256};
-          alert('Geo Location feature is not supported in this browser.');
+            /*var LatLng = {lat: 21.9589651, lng: -102.290256};*/
+            dashboard.map.setMap( LatLng);
         }
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-        /*  center: LatLng,*/
-          center: {lat: -33.9, lng: 151.2},
-        });
-
-        dashboard.map.setMarkers( map);
       };
+    },
+    setMap:  function(  LatLng) {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: LatLng
+          });
+          console.log("a");
+          $.when(   services.dashboard.showCarWashList())
+            .done(function( response, status, request ) {
+              dashboard.map.carWashPoints = response; // Setting Car Washes
+              dashboard.map.setMarkers( map);
+          });
     },
     setMarkers:  function(  map) {
       var image = {
         // Set the icon for the markers on the map
         /*url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',*/
-        url: '/static/assets/images/marker.png',
+        /*url: 'https://material.io/guidelines/static/spec/images/callouts/default.svg',*/
+        url: 'http://localhost:8000/static/assets/images/markerIcon.png',
         // This marker is 20 pixels wide by 32 pixels high.
-        size: new google.maps.Size(20, 32),
+        size: new google.maps.Size(34, 40),
         // The origin for this image is (0, 0).
         origin: new google.maps.Point(0, 0),
         // The anchor for this image is the base of the flagpole at (0, 32).
-        anchor: new google.maps.Point(0, 32)
+        anchor: new google.maps.Point(17, 40)
       };
 
       var shape = {
@@ -103,14 +90,19 @@ var dashboard = {
       };
       
       for (var i = 0; i < dashboard.map.carWashPoints.length; i++) {
+        console.log(image);
         var carWash = dashboard.map.carWashPoints[i];
+        var ubicacion = carWash["ubicacion"].split(',');
+        console.log(ubicacion);
         var marker = new google.maps.Marker({
-          position: {lat: carWash[1], lng: carWash[2]},
+          position: {
+            lat: parseFloat(ubicacion[0]),
+            lng: parseFloat(ubicacion[1])
+          },
           map: map,
           icon: image,
           shape: shape,
-          title: carWash[0],
-          zIndex: carWash[3]
+          title: carWash["nombre"]
         });
       }
     },

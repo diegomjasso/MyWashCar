@@ -88,6 +88,16 @@
 	top: 100px;
 }
 
+.request-block-background	{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index:	90000;
+	background-color: black;
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
 .logo	{
 	width:	50px;
 	height: 50px;
