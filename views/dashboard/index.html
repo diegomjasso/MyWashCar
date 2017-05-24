@@ -2,12 +2,19 @@
 {% load static %}
 {% block content %}
 	<div class="dashboard-content">
-		<div class="side-dashboard-closed" id="side-dashboard">
-			<div class="side-dashboard-container-closed" id="side-dashboard-container">
-				<a href="{% url 'edit_account' %}">Ajustes de Cuenta</a>
-				<a href="{% url 'logout' %}">Salir</a>
+		<div class="side-dashboard-opened" id="side-dashboard">
+			<div class="side-dashboard-container-opened max-width" id="side-dashboard-container">
+				<!-- <a href="{% url 'edit_account' %}">Ajustes de Cuenta</a>
+				<a href="{% url 'logout' %}">Salir</a> -->
+				<div class="row max-width">
+					<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+						<img src="" class="" />aa
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+					</div>
+				</div>
 			</div>
-			<div class="side-dashboard-lash-close" id="side-dashboard-lash-close" onclick="dashboard.ui.manageSide();">
+			<div class="side-dashboard-lash" id="side-dashboard-lash" onclick="dashboard.ui.manageSide();">
 				<i class="fa fa-angle-double-right" id="direction-icnon-sidelash" aria-hidden="true"></i>
 			</div>
 		</div>

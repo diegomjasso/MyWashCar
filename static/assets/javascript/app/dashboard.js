@@ -7,7 +7,7 @@ var dashboard = {
     dashboard.map.showMap();
   },
   startedDashboard: function() {
-    dashboard.ui.closeSide();
+    /*dashboard.ui.closeSide();*/
   },
   ui: {
     sideStatus:  true,
