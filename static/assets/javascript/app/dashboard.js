@@ -63,7 +63,6 @@ var dashboard = {
             zoom: 13,
             center: LatLng
           });
-          console.log("a");
           $.when(   services.dashboard.showCarWashList())
             .done(function( response, status, request ) {
               dashboard.map.carWashPoints = response; // Setting Car Washes
@@ -73,9 +72,7 @@ var dashboard = {
     setMarkers:  function(  map) {
       var image = {
         // Set the icon for the markers on the map
-        /*url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',*/
-        /*url: 'https://material.io/guidelines/static/spec/images/callouts/default.svg',*/
-        url: 'http://localhost:8000/static/assets/images/markerIcon.png',
+        url: '/static/assets/images/markerIcon.png',
         // This marker is 20 pixels wide by 32 pixels high.
         size: new google.maps.Size(34, 40),
         // The origin for this image is (0, 0).
@@ -90,10 +87,8 @@ var dashboard = {
       };
       
       for (var i = 0; i < dashboard.map.carWashPoints.length; i++) {
-        console.log(image);
         var carWash = dashboard.map.carWashPoints[i];
         var ubicacion = carWash["ubicacion"].split(',');
-        console.log(ubicacion);
         var marker = new google.maps.Marker({
           position: {
             lat: parseFloat(ubicacion[0]),

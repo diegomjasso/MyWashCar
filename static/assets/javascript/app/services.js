@@ -20,7 +20,6 @@ var	services	=	{
 	},
 	dashboard:{
 		showCarWashList: function()	{
-			console.log("entro");
 			return	$.ajax({
 				method: "GET",
 				url: services.settings.url + "carwash/",
