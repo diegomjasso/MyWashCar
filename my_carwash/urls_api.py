@@ -6,7 +6,7 @@ from perfiles.viewsets import PerfilViewSet
 router = routers.DefaultRouter()
 
 router.register(r'carwash', CarwashViewSet)
-router.register(r'perfil', PerfilViewSet)
+router.register(r'perfil_usuarios', PerfilViewSet)
 
 
 urlpatterns = [

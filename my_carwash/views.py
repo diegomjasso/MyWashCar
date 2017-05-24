@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import CreateView, View
 from .forms import CreateUserForm, LoginUserForm, EditUserForm, EditPerfilForm
-from perfiles.models import Catalogo_Perfiles
+from perfiles.models import Perfil_Usuario
 
 class IndexClass(CreateView):
 	success_url = reverse_lazy('dashboard:dashboard')
@@ -87,8 +87,8 @@ def edit_account(request):
 
 def perfil_instance(user):
 	try:
-		return user
+		return user.perfil_usuario
 	except:
-		return  Catalogo_Perfiles(user = user)
+		return Perfil_Usuario(user = user)
 		
 
