@@ -49,4 +49,8 @@
 		visibility: hidden;
 		display: none;
 	}
+	
+	.info-username	{
+		text-align: center;
+	}
 }

@@ -434,7 +434,7 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 }
 
 .side-dashboard-container-opened	{
-	width: 235px;
+	width: 215px;
 	padding: 20px 0px 0px 0px;
 	display: inline-block;
 }
@@ -462,6 +462,57 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	background: #000000;
 }
 
+.side-dashboard-tittle-logo	{
+	font-family: 'Clicker Script';
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+}
+
+.side-dashboard-option	{
+	font-size: 20px;
+	font-weight: bold;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.link-dashboard-side {
+	text-decoration: none;
+	color: #e0e0e0;
+}
+
+.link-dashboard-side:link {
+	text-decoration: none;
+}
+
+.link-dashboard-side:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.link-dashboard-side:active {
+	text-decoration: none;
+	color: white;		
+}
+
+.link-dashboard-side:visited {
+	text-decoration: none;
+}
+
+#browse-icon	{
+	font-size: 30px;
+}
+
+#credit-icon	{
+	font-size: 30px;
+}
+
+#avatar-perfil	{
+	font-size: 30px;
+	/*background: white;*/
+	border-radius: 40px;
+}
+
 #direction-icnon-sidelash	{
 	color: white;
 	font-size: 20px;
@@ -471,11 +522,25 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	margin-left: 1px;
 }
 
-#avatar-perfil	{
-	font-size: 133px;
-	color: white;
-	/*background: white;*/
-	border-radius: 130px;
+.logo-dashboard	{
+	width:	70px;
+	height: 70px;
+}
+
+.row-side-dashboard	{
+	border-width: 2px;
+	border-bottom-style:	solid;
+	border-color: #5e5d5d;
+}
+
+.recently-search {
+	color: #e0e0e0;
+	font-size: 10px;
+}
+
+.recently-search-items {
+	color: #e0e0e0;
+	font-size: 12px;	
 }
 
 @media only screen and (min-height: 700px)	{

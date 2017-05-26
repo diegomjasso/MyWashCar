@@ -42,6 +42,10 @@
 	.home-info-container {
 		background: rgba(0,0,0, 0);
 	}
+
+	.info-username	{
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 125px) {

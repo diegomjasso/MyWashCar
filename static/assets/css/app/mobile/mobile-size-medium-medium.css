@@ -58,4 +58,8 @@
 	.home-info-container {
 		background: rgba(0,0,0, 0);
 	}
+	
+	.info-username	{
+		text-align: center;
+	}
 }

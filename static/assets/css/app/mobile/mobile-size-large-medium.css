@@ -63,6 +63,10 @@
 	.text-email	{
 		font-size: 12px;
 	}
+
+	.info-username	{
+		text-align: center;
+	}
 }
 
 @media only screen and (min-width: 481px) and (max-width : 767px) {
@@ -86,6 +90,10 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width : 990px) {
+	.info-username	{
+		text-align: justify;
+	}
+
 	.home-info	{
 		margin-left: 50px;
 		margin-right: 50px;
