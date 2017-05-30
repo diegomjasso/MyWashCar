@@ -46,6 +46,14 @@
 	.info-username	{
 		text-align: center;
 	}
+
+	.dashboard-content	{
+		width: 767px;
+	}
+	
+	.right-dashboard-width	{
+		width: 517px!important;
+	}
 }
 
 @media only screen and (max-width: 125px) {

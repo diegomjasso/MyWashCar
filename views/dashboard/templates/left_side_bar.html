@@ -1,0 +1,99 @@
+{% load static %}
+<div class="side-dashboard-opened side-dashboard" id="side-dashboard">
+	<div class="side-dashboard-container-opened max-width" id="side-dashboard-container">
+		<!-- 
+		<a href="{% url 'edit_account' %}">Ajustes de Cuenta</a>
+		<a href="{% url 'edit_user_password' %}">Cambiar Contraseña</a>
+		<a href="{% url 'logout' %}">Salir</a>
+		-->
+		<div class="row margin-left-10 max-width padding-top-20 padding-bottom-20">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+						<img alt="Brand" src="{% static "assets/images/logo.png" %}" class="logo-dashboard img-responsive">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
+						<h5 class="side-dashboard-tittle-logo text-align-center max-width">¡ Bienvenido !</h5>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="row margin-left-10 max-width padding-bottom-40 padding-top-20">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-20 max-width">
+				<div class="link-dashboard-side max-width display-block" onclick="dashboard.ui.openUserSettings();">
+					<img src="" class="img-circle display-inline" id="avatar-perfil" />
+					<i class="fa fa-user-circle-o avatar-perfil display-inline" aria-hidden="true" id="avatar-perfil"></i>
+					<label class=" side-dashboard-option display-inline margin-left-10">PacoFlaco</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="row margin-left-10 row-side-dashboard max-width padding-bottom-10 padding-top-10">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-20 max-width">
+				<div class="link-dashboard-side max-width display-block" onclick="dashboard.ui.openPaymentSettings();">
+					<i class="fa fa-credit-card-alt display-inline" aria-hidden="true" id="credit-icon"></i>
+					<label class=" side-dashboard-option display-inline margin-left-10">Pagos</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="browse-section" id="browse-section">
+			<!--
+			<div class="row margin-left-10 max-width padding-bottom-10 padding-top-10">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-20 max-width">
+					<div class="link-dashboard-side max-width display-block" onclick="dashboard.ui.closeRightSection();">
+						<i class="fa fa-map-o display-inline" aria-hidden="true" id="browse-icon"></i>
+						<label class=" side-dashboard-option display-inline margin-left-10">Explora</label>
+					</div>
+				</div>
+			</div>
+			-->
+			<div class="row margin-left-20 row-side-dashboard max-width padding-top-10 padding-left-05">
+			  <div class="form-group has-feedback">
+			  	<div class="search-icon-container">
+						<input type="text" class="form-control search-input max-width" placeholder="Search for...">
+
+						<span class="fa fa-search search-icon"></span>
+					</div>
+	      </div>
+			</div>
+		</div>
+
+		<!-- Seccion de busquedas recientes -->
+		<div id="searches-container" class="searches-container">
+			<div class="row margin-left-10 max-height max-width padding-top-10 padding-bottom-10">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-justified max-width">
+					<label class="recently-search">Busquedas recientes</label>
+				</div>
+			</div>
+			<div class="row margin-left-20 padding-right-10 max-height max-width">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 max-width">
+					<label class="recently-search-items text-justified max-width">
+						Fracc. Balcones de Oriente, Machupicchu 311 int. 23, Aguascalientes, Aguascalientes
+					</label>
+				</div>
+			</div>
+			<div class="row margin-left-20 padding-right-10 max-height max-width">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 max-width">
+					<label class="recently-search-items text-justified max-width">
+						Fracc. Balcones de Oriente, Machupicchu 311 int. 23, Aguascalientes, Aguascalientes
+					</label>
+				</div>
+			</div>
+			<div class="row margin-left-20 padding-right-10 max-height max-width">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 max-width">
+					<label class="recently-search-items text-justified max-width">
+						Fracc. Balcones de Oriente, Machupicchu 311 int. 23, Aguascalientes, Aguascalientes
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="side-dashboard-lash" id="side-dashboard-lash" onclick="dashboard.ui.manageSide();">
+		<i class="fa fa-angle-double-left" id="direction-icnon-sidelash" aria-hidden="true"></i>
+	</div>
+</div>

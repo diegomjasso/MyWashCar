@@ -5,8 +5,8 @@ var	services	=	{
 	user:{
 		showInfoUser:	function()	{
 			return	$.ajax({
-				method: "POST",
-				url: services.settings.url,
+				method: "GET",
+				url: services.settings.url + 'perfil_usuarios/',
 				dataType:'json',
 				contentType: "application/json",
 				data:{},

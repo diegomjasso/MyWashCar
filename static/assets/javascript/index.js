@@ -9,16 +9,16 @@
 
 var setStyles = {
 	init: function	()	{
-		setStyles.fixPositionHomeInfo();
-
 		dashboard.init();
-		dashboard.map.fixMapHeiight();
-
-
-		$(window).resize(	function (){
-			dashboard.map.fixMapHeiight();
-			setStyles.fixPositionHomeInfo();
+		setStyles.callInitFunctions();
+		$(window).resize(	function ()	{
+			setStyles.callInitFunctions();
 		});
+	},
+	callInitFunctions:	function()	{
+		setStyles.fixPositionHomeInfo();
+		setStyles.fixRightSideWidth();
+		dashboard.map.fixMapHeight();
 	},
 	fixPositionHomeInfo: function () {
 		var authenticationObj = document.getElementsByClassName('authentication');
@@ -33,6 +33,15 @@ var setStyles = {
 			$("#authentication").css(	"margin-top",	(-(heightAuthentication/2)));
 			$("#authentication").css(	"margin-left",	(-(widthAuthentication) - 40));
 		};
+	},
+	fixRightSideWidth: function()	{
+		var windowsWidth = $( window ).width();
+		var widthLeftSide = document.getElementById('side-dashboard').clientWidth;
+		if (widthLeftSide != undefined) {
+			var finalWidth = windowsWidth - widthLeftSide;
+        	$("#right-side-opened").css(  "width", finalWidth);
+        	//$("#map").css(  "width", finalWidth);
+		}
 	}
 }
 
@@ -47,7 +56,7 @@ var loadModal = function() {
 	    var idModal          = $(this).data("idmodal");
 	 
 	    $contenedorModal.load(urlModal + ' ' + idModal , function(response) {
-	    $(this).modal({backdrop: "static"});
+	    	$(this).modal({backdrop: "static"});
 	    });
 	});
 }

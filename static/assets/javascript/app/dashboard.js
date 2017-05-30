@@ -39,6 +39,42 @@ var dashboard = {
       $("#side-dashboard").addClass("side-dashboard-closed");
       $("#direction-icnon-sidelash").addClass("fa-angle-double-right");
       dashboard.ui.sideStatus = false;
+    },
+    openUserSettings: function()  {
+      dashboard.ui.openSide();
+      $("#side-dashboard-lash").removeClass("display-inline-block");
+      $("#right-side-opened").removeClass("display-none");
+      $("#user-settings-container").removeClass("display-none");
+      $("#payment-settings-container").removeClass("display-inline-block");
+
+      $("#side-dashboard-lash").addClass("display-none");
+      $("#right-side-opened").addClass("display-inline-block");
+      $("#user-settings-container").addClass("display-inline-block");
+      $("#payment-settings-container").addClass("display-none");
+    },
+    openPaymentSettings: function() {
+      dashboard.ui.openSide();
+      $("#side-dashboard-lash").removeClass("display-inline-block");
+      $("#right-side-opened").removeClass("display-none");
+      $("#user-settings-container").removeClass("display-inline-block");
+      $("#payment-settings-container").removeClass("display-none");
+
+      $("#side-dashboard-lash").addClass("display-none");
+      $("#right-side-opened").addClass("display-inline-block");
+      $("#user-settings-container").addClass("display-none");
+      $("#payment-settings-container").addClass("display-inline-block");
+    },
+    closeRightSection: function()  {
+      dashboard.ui.openSide();
+      $("#side-dashboard-lash").removeClass("display-none");
+      $("#right-side-opened").removeClass("display-inline-block");
+      $("#user-settings-container").removeClass("display-inline-block");
+      $("#payment-settings-container").removeClass("display-inline-block");
+
+      $("#side-dashboard-lash").addClass("display-inline-block");
+      $("#right-side-opened").addClass("display-none");
+      $("#user-settings-container").addClass("display-none");
+      $("#payment-settings-container").removeClass("display-none");
     }
   },
   map: {
@@ -101,7 +137,7 @@ var dashboard = {
         });
       }
     },
-    fixMapHeiight: function ()  {
+    fixMapHeight: function ()  {
       var windowsHeight = $( window ).height();
         finalHeight = windowsHeight;
 

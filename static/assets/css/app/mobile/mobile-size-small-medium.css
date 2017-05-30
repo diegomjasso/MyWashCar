@@ -1,4 +1,5 @@
 @media only screen and (min-width: 220px) and (max-width : 299px) {
+	
 	.home-info-container {
 		background: rgba(0,0,0, 0);
 	}
@@ -53,4 +54,9 @@
 	.info-username	{
 		text-align: center;
 	}
+
+	.dashboard-content	{
+		width: 767px;
+	}
+	
 }

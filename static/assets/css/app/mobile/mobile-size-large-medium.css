@@ -87,6 +87,14 @@
 	.home-info-container {
 		background: rgba(0,0,0, 0);
 	}
+
+	.dashboard-content	{
+		width: 767px;
+	}
+
+	.right-dashboard-width	{
+		width: 517px!important;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width : 990px) {
@@ -114,5 +122,9 @@
 
 	.authentication-container	.row	{
 		text-align: right;
+	}
+
+	.dashboard-content	{
+		width:	100%;
 	}
 }
