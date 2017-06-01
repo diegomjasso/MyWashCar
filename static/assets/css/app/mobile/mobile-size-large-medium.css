@@ -1,4 +1,12 @@
-@media only screen and (min-width: 481px) and (max-width : 990px) {
+@media only screen and (min-width: 481px) and (max-width : 991px) {
+	.text-dashboard-profile-value	{
+		margin-left: 100px;
+	}
+
+	.text-dashboard-profile-index	{
+		margin-left: 70px;
+	}
+
 	.tittle-logo	{
 	    font-size: 0.9em;
 	    display: block;
@@ -97,7 +105,8 @@
 	}
 }
 
-@media only screen and (min-width: 768px) and (max-width : 990px) {
+@media only screen and (min-width: 768px) and (max-width : 991px) {
+
 	.info-username	{
 		text-align: justify;
 	}

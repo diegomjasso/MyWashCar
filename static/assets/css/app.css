@@ -27,6 +27,14 @@
 }
 /** Helper Clesses CSS **/
 
+.cursor-pointer:hover	{
+	cursor: pointer;
+}
+
+.cursor-pointer:active	{
+	cursor: pointer;
+}
+
 .text-justified	{
 	text-align: justify;
 }
@@ -519,7 +527,6 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 
 #avatar-perfil	{
 	font-size: 30px;
-	/*background: white;*/
 	border-radius: 40px;
 }
 
@@ -587,13 +594,47 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	border-radius: 10px;
 	border-color: #3b3b3b!important;
 	width: 350px;
+	position: relative;
+}
+
+.background-image-profile	{
+	z-index: 1;
+	height: 100%;
+	width:	100%;
+	position: absolute;
+	border-radius: 10px
+}
+
+.background-image-profile:hover	{
+	background: rgba(255,255,255,0.4);
+	cursor: pointer;
+}
+
+.background-image-profile:active	{
+	background: rgba(255,255,255,0.4);
+	cursor: pointer;
+}
+
+.fooder-image	{
+	line-height: 40px;
+	z-index: 0;
+	position: absolute;
+	width:	100%;
+	height: 40px;
+	margin-top: -40px;
+	background: #3b3b3b!important;
 }
 
 .image-profile-dashboard	{
+	width: 350px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 10px;
 }
 
 .fa.fa-sign-out.close-session	{
 	color: white;
+	/*font-family: 'Gloria Hallelujah';*/
 	font-size: 20px;
 }
 
@@ -618,6 +659,34 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	color: #FEF65B;
 }
 
+.fa.fa-camera.fooder-picture-icon	{
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+.profile-info-tittle	{
+	font-family: 'Gloria Hallelujah';
+	font-weight: bold;
+	color: white;
+}
+
+.text-dashboard-profile	{
+	color: white;
+}
+
+.text-dashboard-profile-index	{
+	font-family: 'Gloria Hallelujah';
+	font-size: 22px;
+	font-weight: bold;
+	text-align: right;
+}
+
+.text-dashboard-profile-value	{
+	font-size: 16px;
+	text-align: justify;
+}
+
+
 
 @media only screen and (min-height: 700px)	{
 	.parallax	{
@@ -633,6 +702,14 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 	}
 
 	.right-side-opened	{
+		height: 100%;
+	}
+
+	html{
+		height: 100%;
+	}
+
+	body{
 		height: 100%;
 	}
 }
@@ -652,5 +729,17 @@ input:-moz-placeholder { font-family: 'Indie Flower', cursive; }
 
 	.right-side-opened	{
 		height: 700px;
+		padding-bottom: 50px;
+		overflow-y: auto;
+	}
+
+	html{
+		height: 700px;
+		overflow-y: hidden;
+	}
+
+	body{
+		height: 700px;
+		overflow-y: hidden;
 	}
 }

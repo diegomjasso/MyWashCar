@@ -54,6 +54,14 @@
 	.right-dashboard-width	{
 		width: 517px!important;
 	}
+
+	.text-dashboard-profile-index	{
+		margin-left: 30px;
+	}
+
+	.text-dashboard-profile-value	{
+		margin-left: 50px;
+	}
 }
 
 @media only screen and (max-width: 125px) {

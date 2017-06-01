@@ -70,4 +70,12 @@
 	.right-dashboard-width	{
 		width: 517px!important;
 	}
+
+	.text-dashboard-profile-index	{
+		margin-left: 30px;
+	}
+
+	.text-dashboard-profile-value	{
+		margin-left: 50px;
+	}
 }

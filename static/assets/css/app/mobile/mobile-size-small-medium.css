@@ -1,5 +1,12 @@
 @media only screen and (min-width: 220px) and (max-width : 299px) {
-	
+	.text-dashboard-profile-index	{
+		margin-left: 30px;
+	}
+
+	.text-dashboard-profile-value	{
+		margin-left: 50px;
+	}
+		
 	.home-info-container {
 		background: rgba(0,0,0, 0);
 	}
