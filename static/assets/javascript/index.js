@@ -36,11 +36,10 @@ var setStyles = {
 	},
 	fixRightSideWidth: function()	{
 		var windowsWidth = $( window ).width();
-		var widthLeftSide = document.getElementById('side-dashboard').clientWidth;
+		var widthLeftSide = document.getElementById('side-dashboard');
 		if (widthLeftSide != undefined) {
-			var finalWidth = windowsWidth - widthLeftSide;
+			var finalWidth = windowsWidth - widthLeftSide.clientWidth;
         	$("#right-side-opened").css(  "width", finalWidth);
-        	//$("#map").css(  "width", finalWidth);
 		}
 	}
 }

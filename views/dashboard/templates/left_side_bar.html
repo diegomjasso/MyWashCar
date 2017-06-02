@@ -2,9 +2,9 @@
 <div class="side-dashboard-opened side-dashboard" id="side-dashboard">
 	<div class="side-dashboard-container-opened max-width" id="side-dashboard-container">
 		<!-- 
-		<a href="{% url 'edit_account' %}">Ajustes de Cuenta</a>
-		<a href="{% url 'edit_user_password' %}">Cambiar Contraseña</a>
-		<a href="{% url 'logout' %}">Salir</a>
+			<a href="{% url 'edit_account' %}">Ajustes de Cuenta</a>
+			<a href="{% url 'edit_user_password' %}">Cambiar Contraseña</a>
+			<a href="{% url 'logout' %}">Salir</a>
 		-->
 		<div class="row margin-left-10 max-width padding-top-20 padding-bottom-20">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-align-center">
@@ -21,16 +21,20 @@
 				
 			</div>
 		</div>
+
 		<!-- Perfil -->
 		<div class="row margin-left-10 max-width padding-bottom-40 padding-top-20">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-20 max-width">
 				<div class="link-dashboard-side max-width display-block" onclick="dashboard.ui.openUserSettings();">
-					<img src="" class="img-circle display-inline" id="avatar-perfil" />
-					<i class="fa fa-user-circle-o avatar-perfil display-inline" aria-hidden="true" id="avatar-perfil"></i>
-					<label class=" side-dashboard-option display-inline margin-left-10 text-bold">PacoFlaco</label>
+					<img class="img-circle" id="avatar-perfil" />
+					<i class="fa fa-user-circle-o avatar-perfil" aria-hidden="true" id="avatar-perfil">
+					</i>
+					<label class=" side-dashboard-option display-inline margin-left-10 text-bold" id="username-info">
+					</label>
 				</div>
 			</div>
 		</div>
+
 		<!-- Pagos -->
 		<div class="row margin-left-10 row-side-dashboard max-width padding-bottom-10 padding-top-10">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-20 max-width">
@@ -40,6 +44,7 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- Explora  -->
 		<div class="browse-section margin-left-10 row-side-dashboard max-width" id="browse-section">
 			<div class="row margin-left-10 max-width padding-top-10 padding-left-05">

@@ -7,10 +7,12 @@ var dashboard = {
     dashboard.map.showMap();
   },
   startedDashboard: function() {
+    dashboard.ui.loadUserInfo.load();
     /*dashboard.ui.closeSide();*/
   },
   ui: {
     sideStatus:  true,
+    backgroundOpacity: false,
     manageSide: function()  {
       if (dashboard.ui.sideStatus == false) {
         dashboard.ui.openSide();
@@ -75,6 +77,57 @@ var dashboard = {
       $("#right-side-opened").addClass("display-none");
       $("#user-settings-container").addClass("display-none");
       $("#payment-settings-container").removeClass("display-none");
+    },
+    imageBackgroundOpacity: function()  {
+      if (dashboard.ui.backgroundOpacity == false) {
+        $("#background-image-profile").addClass("background-image-profile-hover");
+        dashboard.ui.backgroundOpacity = true;
+      } else  {
+        $("#background-image-profile").removeClass("background-image-profile-hover");
+        dashboard.ui.backgroundOpacity = false;
+      };
+    },
+    loadUserInfo: {
+      left: function( info) {
+        if (info.perfil_usuario.avatar ==  "") {
+          $("img#avatar-perfil").addClass("display-none");
+          $("i#avatar-perfil").addClass("display-inline-block");
+        } else  {
+          $("img#avatar-perfil").attr("src",  "/" + info.perfil_usuario.avatar);
+          $("img#avatar-perfil").addClass("display-inline-block");
+          $("i#avatar-perfil").addClass("display-none");
+        };
+
+        $("label#username-info").text( info.username);
+      },
+      right: function(  info) {
+        if (info.perfil_usuario.avatar ==  "") {
+          $("img#avatar-perfil-dashboard").addClass("display-none");
+          $("i#avatar-perfil-dashboard").addClass("display-inline-block");
+        } else  {
+          $("img#avatar-perfil-dashboard").attr("src",  "/" + info.perfil_usuario.avatar);
+          $("img#avatar-perfil-dashboard").addClass("display-inline-block");
+          $("i#avatar-perfil-dashboard").addClass("display-none");
+        };
+
+        $("h4#username-info").text( info.username);
+        $("label#nombre-perfil").text(info.first_name);
+        $("label#apellidos-perfil").text(info.last_name);
+        $("label#emal-perfil").text(info.email);
+        $("label#direccion-perfil").text(info.perfil_usuario.direccion);
+        $("label#colonia-perfil").text(info.perfil_usuario.colonia);
+        $("label#pais-perfil").text(info.perfil_usuario.pais);
+        $("label#estado-perfild").text(info.perfil_usuario.estado);
+        $("label#municipio-perfil").text(info.perfil_usuario.municipio);
+        $("label#telfono-perfil").text(info.perfil_usuario.telefono);
+      },
+      load: function()  {
+        $.when( services.user.showInfoUser()).done( function( response, status, request)  {
+          var info = response[0];
+          dashboard.ui.loadUserInfo.left( info);
+          dashboard.ui.loadUserInfo.right(  info);
+        });
+      }
     }
   },
   map: {
