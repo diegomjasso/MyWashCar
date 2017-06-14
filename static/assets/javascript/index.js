@@ -1,10 +1,6 @@
-(function(){
-
-	setTimeout( function()  {
-    	setStyles.init();
-    	loadModal();
-  	},	200);
-})();
+ $( document ).ready(function() {
+ 	setStyles.init();
+});
 
 
 var setStyles = {
@@ -48,8 +44,6 @@ var loadModal = function() {
 	$('.btnModal').on("click", function(event) {
 	    event.preventDefault();
 
-	   
-	 
 	    var $contenedorModal = $('#myModal');
 	    var urlModal         = $(this).attr("href");
 	    var idModal          = $(this).data("idmodal");
