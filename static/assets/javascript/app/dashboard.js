@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+  dashboard.init();
+});
+
 var dashboard = {
 	test: function ()	{
 		console.log("Load dashboard script");
@@ -7,12 +11,23 @@ var dashboard = {
     dashboard.map.showMap();
   },
   startedDashboard: function() {
+    $("html").addClass("overflow-y-disabled");
+    $("body").addClass("overflow-y-disabled");
+    dashboard.ui.fixRightSideWidth();
     dashboard.ui.loadUserInfo.load();
     /*dashboard.ui.closeSide();*/
   },
   ui: {
     sideStatus:  true,
     backgroundOpacity: false,
+    fixRightSideWidth: function() {
+      var windowsWidth = $( window ).width();
+      var widthLeftSide = document.getElementById('side-dashboard');
+      if (widthLeftSide != undefined) {
+        var finalWidth = windowsWidth - widthLeftSide.clientWidth;
+            $("#right-side-opened").css(  "width", finalWidth);
+      }
+    },
     manageSide: function()  {
       if (dashboard.ui.sideStatus == false) {
         dashboard.ui.openSide();

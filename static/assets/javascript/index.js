@@ -1,4 +1,4 @@
- $( document ).ready(function() {
+$( document ).ready(function() {
  	setStyles.init();
  	loadModal();
 });
@@ -6,7 +6,6 @@
 
 var setStyles = {
 	init: function	()	{
-		dashboard.init();
 		setStyles.callInitFunctions();
 		$(window).resize(	function ()	{
 			setStyles.callInitFunctions();
@@ -14,8 +13,6 @@ var setStyles = {
 	},
 	callInitFunctions:	function()	{
 		setStyles.fixPositionHomeInfo();
-		setStyles.fixRightSideWidth();
-		dashboard.map.fixMapHeight();
 	},
 	fixPositionHomeInfo: function () {
 		var authenticationObj = document.getElementsByClassName('authentication');
@@ -30,14 +27,6 @@ var setStyles = {
 			$("#authentication").css(	"margin-top",	(-(heightAuthentication/2)));
 			$("#authentication").css(	"margin-left",	(-(widthAuthentication) - 40));
 		};
-	},
-	fixRightSideWidth: function()	{
-		var windowsWidth = $( window ).width();
-		var widthLeftSide = document.getElementById('side-dashboard');
-		if (widthLeftSide != undefined) {
-			var finalWidth = windowsWidth - widthLeftSide.clientWidth;
-        	$("#right-side-opened").css(  "width", finalWidth);
-		}
 	}
 }
 
