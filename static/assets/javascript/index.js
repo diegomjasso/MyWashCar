@@ -1,10 +1,6 @@
-(function(){
-
-	setTimeout( function()  {
-    	setStyles.init();
-    	loadModal();
-  	},	200);
-})();
+ $( document ).ready(function() {
+ 	setStyles.init();
+});
 
 
 var setStyles = {
@@ -36,11 +32,10 @@ var setStyles = {
 	},
 	fixRightSideWidth: function()	{
 		var windowsWidth = $( window ).width();
-		var widthLeftSide = document.getElementById('side-dashboard').clientWidth;
+		var widthLeftSide = document.getElementById('side-dashboard');
 		if (widthLeftSide != undefined) {
-			var finalWidth = windowsWidth - widthLeftSide;
+			var finalWidth = windowsWidth - widthLeftSide.clientWidth;
         	$("#right-side-opened").css(  "width", finalWidth);
-        	//$("#map").css(  "width", finalWidth);
 		}
 	}
 }
@@ -49,8 +44,6 @@ var loadModal = function() {
 	$('.btnModal').on("click", function(event) {
 	    event.preventDefault();
 
-	   
-	 
 	    var $contenedorModal = $('#myModal');
 	    var urlModal         = $(this).attr("href");
 	    var idModal          = $(this).data("idmodal");

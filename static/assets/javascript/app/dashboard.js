@@ -7,10 +7,12 @@ var dashboard = {
     dashboard.map.showMap();
   },
   startedDashboard: function() {
+    dashboard.ui.loadUserInfo.load();
     /*dashboard.ui.closeSide();*/
   },
   ui: {
     sideStatus:  true,
+    backgroundOpacity: false,
     manageSide: function()  {
       if (dashboard.ui.sideStatus == false) {
         dashboard.ui.openSide();
@@ -51,6 +53,7 @@ var dashboard = {
       $("#right-side-opened").addClass("display-inline-block");
       $("#user-settings-container").addClass("display-inline-block");
       $("#payment-settings-container").addClass("display-none");
+      $("label#first_name").focus();
     },
     openPaymentSettings: function() {
       dashboard.ui.openSide();
@@ -75,6 +78,105 @@ var dashboard = {
       $("#right-side-opened").addClass("display-none");
       $("#user-settings-container").addClass("display-none");
       $("#payment-settings-container").removeClass("display-none");
+    },
+    imageBackgroundOpacity: function()  {
+      if (dashboard.ui.backgroundOpacity == false) {
+        $("#background-image-profile").addClass("background-image-profile-hover");
+        dashboard.ui.backgroundOpacity = true;
+      } else  {
+        $("#background-image-profile").removeClass("background-image-profile-hover");
+        dashboard.ui.backgroundOpacity = false;
+      };
+    },
+    saveInfo:{
+      loadTempImage: function(  obj) {
+        if (obj.files && obj.files[0]) {
+          console.log(obj.files[0]);
+          var image = new FileReader();
+          image.onload = function (e) {
+            console.log(e.target.result);
+            dashboard.ui.loadUserInfo.displayUserImg( 2);
+            $("img#avatar-perfil-dashboard").attr("src", e.target.result);
+          }
+          image.readAsDataURL(obj.files[0]);
+        }
+      },
+      send: function( ) {
+        
+      }
+    }
+    loadUserInfo: {
+      displayDefaultUserImg: function(i) {
+        i = i || 3;
+
+        if (  i == 1 || i == 3) {
+          $("img#avatar-perfil").addClass("display-none");
+          $("img#avatar-perfil").removeClass("display-inline-block");
+          $("i#avatar-perfil").addClass("display-inline-block");
+          $("i#avatar-perfil").removeClass("display-none");
+        }
+
+        if (i==2 || i == 3 ) {
+          $("img#avatar-perfil-dashboard").addClass("display-none");
+          $("img#avatar-perfil-dashboard").removeClass("display-inline-block");
+          $("i#avatar-perfil-dashboard").addClass("display-inline-block");
+          $("i#avatar-perfil-dashboard").removeClass("display-none");
+        }
+      },
+      displayUserImg: function( i)  {
+        i = i || 3;
+        if (  i == 1 || i == 3) {
+          $("img#avatar-perfil").addClass("display-inline-block");
+          $("img#avatar-perfil").removeClass("display-none");
+          $("i#avatar-perfil").addClass("display-none");
+          $("i#avatar-perfil").removeClass("display-inline-block");
+        }
+
+        if (  i == 2 || i == 3) {
+          $("img#avatar-perfil-dashboard").addClass("display-inline-block");
+          $("img#avatar-perfil-dashboard").removeClass("display-none");
+          $("i#avatar-perfil-dashboard").addClass("display-none");
+          $("i#avatar-perfil-dashboard").removeClass("display-inline-block");
+        }
+      }, 
+      left: function( info) {
+        if (info.perfil_usuario ==  null) {
+          dashboard.ui.loadUserInfo.displayDefaultUserImg();
+        } else  {
+          $("img#avatar-perfil").attr("src",  "/" + info.perfil_usuario.avatar);
+          dashboard.ui.loadUserInfo.displayUserImg();
+        };
+
+        $("label#username-info").text(  info.username);
+      },
+      right: function(  info) {
+        if (info.perfil_usuario ==  null) {
+          dashboard.ui.loadUserInfo.displayDefaultUserImg();
+        } else  {
+          $("img#avatar-perfil-dashboard").attr("src",  "/" + info.perfil_usuario.avatar);
+          dashboard.ui.loadUserInfo.displayUserImg();
+        };
+
+        $("h4#username-info").text( info.username);
+        $("label#first_name").text(  info.first_name);
+        $("label#last_name").text( info.last_name);
+        $("label#email").text(  info.email);
+        if (info.perfil_usuario != null) {
+          $("label#direccion").text( info.perfil_usuario.direccion);
+          $("label#colonia").text( info.perfil_usuario.colonia);
+          $("label#pais").text(  info.perfil_usuario.pais);
+          $("label#estado").text( info.perfil_usuario.estado);
+          $("label#municipio").text( info.perfil_usuario.municipio);
+          $("label#telfono").text( info.perfil_usuario.telefono);
+        }
+      },
+      load: function()  {
+        $.when( services.user.showInfoUser()).done( function( response, status, request)  {
+          var info = response[0];
+          dashboard.ui.loadUserInfo.left( info);
+          dashboard.ui.loadUserInfo.right(  info);
+        });
+      }
     }
   },
   map: {
@@ -85,7 +187,7 @@ var dashboard = {
       if (  mapObject != null) {
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function (p) {
-            /*var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);*/
+            //var LatLng = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
             dashboard.map.setMap( LatLng);
           });
         } else {

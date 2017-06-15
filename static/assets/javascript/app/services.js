@@ -56,11 +56,10 @@ var	services	=	{
 		errorResponse: function(	response)	{
 			services.request.endRequest();
 			response   =    response    || false;
-			var message =   "!	Error";
+			var message =   "";
 			if (response) {
 				message = response.message;
 			};
-			alert(message);
 			/*	app.configAlertDialog(  "ALERT",  message, 5);	*/
 		},
 		fatalErrorResponse: function()	{
