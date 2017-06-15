@@ -89,22 +89,40 @@ var dashboard = {
       };
     },
     saveInfo:{
+      file: null,
       loadTempImage: function(  obj) {
         if (obj.files && obj.files[0]) {
-          console.log(obj.files[0]);
           var image = new FileReader();
           image.onload = function (e) {
-            console.log(e.target.result);
             dashboard.ui.loadUserInfo.displayUserImg( 2);
             $("img#avatar-perfil-dashboard").attr("src", e.target.result);
           }
+
+          dashboard.ui.saveInfo.file = obj.files[0];
           image.readAsDataURL(obj.files[0]);
         }
       },
       send: function( ) {
+        var userInfo = {};
+
+        userInfo.email = $("#email").text(),
+        userInfo.name = $("#first_name").text(),
+        userInfo.last_name = $("#last_name").text(),
+        userInfo.perfil_usuario = {};
         
+        if (dashboard.ui.saveInfo.file != null)
+          userInfo.perfil_usuario.avatar = dashboard.ui.saveInfo.file;
+
+        userInfo.perfil_usuario.direccion = $("#direccion").text(),
+        userInfo.perfil_usuario.colonia = $("#colonia").text(),
+        userInfo.perfil_usuario.pais = $("#pais").text(),
+        userInfo.perfil_usuario.estado = $("#estado").text(),
+        userInfo.perfil_usuario.municipio = $("#municipio").text(),
+        userInfo.perfil_usuario.telfono = $("#telefono").text();
+
+        console.log(userInfo);
       }
-    }
+    },
     loadUserInfo: {
       displayDefaultUserImg: function(i) {
         i = i || 3;
