@@ -1,12 +1,14 @@
 var	services	=	{
 	settings:	{
-		url: "http://localhost:8000/api/"
+		getURL: function()	{
+			return window.location.origin + "/api/";
+		}
 	},
 	user:{
 		showInfoUser:	function()	{
 			return	$.ajax({
 				method: "GET",
-				url: services.settings.url + 'perfil_usuarios/',
+				url: services.settings.getURL() + 'perfil_usuarios/',
 				dataType:'json',
 				contentType: "application/json",
 				data:{},
@@ -22,7 +24,7 @@ var	services	=	{
 		showCarWashList: function()	{
 			return	$.ajax({
 				method: "GET",
-				url: services.settings.url + "carwash/",
+				url: services.settings.getURL() + "carwash/",
 				dataType:'json',
 				contentType: "application/json",
 				data:{},

@@ -812,11 +812,13 @@ input.background-image-profile	{
 
 	html{
 		height: 700px;
-		overflow-y: hidden;
 	}
 
 	body{
 		height: 700px;
+	}
+
+	.overflow-y-disabled	{
 		overflow-y: hidden;
 	}
 }
