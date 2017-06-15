@@ -11,9 +11,9 @@ var dashboard = {
     dashboard.map.showMap();
   },
   startedDashboard: function() {
+    dashboard.ui.fixRightSideWidth();
     $("html").addClass("overflow-y-disabled");
     $("body").addClass("overflow-y-disabled");
-    dashboard.ui.fixRightSideWidth();
     dashboard.ui.loadUserInfo.load();
     /*dashboard.ui.closeSide();*/
   },
@@ -215,6 +215,7 @@ var dashboard = {
   map: {
     carWashPoints: [],
     showMap: function ()  {
+      dashboard.map.fixMapHeight();
       var LatLng = {lat: 21.8853, lng:- 102.2916};
       mapObject = document.getElementById('map');
       if (  mapObject != null) {
@@ -224,7 +225,6 @@ var dashboard = {
             dashboard.map.setMap( LatLng);
           });
         } else {
-            /*var LatLng = {lat: 21.9589651, lng: -102.290256};*/
             dashboard.map.setMap( LatLng);
         }
       };
