@@ -1,5 +1,6 @@
  $( document ).ready(function() {
  	setStyles.init();
+ 	loadModal();
 });
 
 
