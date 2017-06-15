@@ -18,6 +18,12 @@ class IndexClass(CreateView):
 	template_name = 'index.html'
 	form_class =  CreateUserForm
 
+	"""def get(self, request, *args, **kwargs):
+		if request.user.is_authenticated():
+			return redirect('dashboard:dashboard')
+		else:
+			return super(IndexClass, self).get(request, *args, **kwargs)"""
+
 	def form_valid(self, form):
 		self.object = form.save(commit = False)
 		self.object.set_password(self.object.password)

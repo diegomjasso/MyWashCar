@@ -30,6 +30,15 @@
 	    			<div class="row max-height">
 	    				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				    		<div class="authentication va-center-parallax" id="authentication" >
+				    		{% if user.is_authenticated %}
+				    		<div class="text-white">
+				    			<p>Usuario: {{ user.first_name}} </p>
+				    			<p>Ultimo ves que inico sesion:</p> 
+				    			{{ user.last_login }}
+				    			<p>Ir al <a href="{% url 'dashboard:dashboard' %}">dashboard</a> </p>
+				    		</div>
+				    			
+				    		{% else %}
 				    			<!-- Tab Navs -->
 				    			<ul class="nav nav-tabs" role="tablist">
 								  <li class="nav-item">
@@ -98,6 +107,7 @@
 										</div>
 									</div>
 								</div>
+								{% endif %}
 							</div>
 						</div>
 					</div>
