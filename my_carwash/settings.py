@@ -84,9 +84,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'my_carwash',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'root',
         #'PASSWORD': 'D1234abcDE',
-        'HOST': 'localhost',
+        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock',
         'PORT': '3306',
         'OPTIONS': {
             'sql_mode': 'traditional',

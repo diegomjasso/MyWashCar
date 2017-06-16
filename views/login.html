@@ -5,6 +5,13 @@
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         </div>
         <div class="modal-body">
+        	{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
         <form method="post" action="login/">
 			{% csrf_token %}
 			
@@ -21,6 +28,9 @@
 							<div class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></div>
 						{% endif %}
 						{{ field }}
+						{% if field.errors %}
+							{{ field.errors }}
+						{% endif %}	
 					</div>
 				</div>
 			{% endfor %}

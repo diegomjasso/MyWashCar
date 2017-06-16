@@ -18,16 +18,21 @@ class IndexClass(CreateView):
 	template_name = 'index.html'
 	form_class =  CreateUserForm
 
-	"""def get(self, request, *args, **kwargs):
+
+	def get(self, request, *args, **kwargs):
 		if request.user.is_authenticated():
 			return redirect('dashboard:dashboard')
 		else:
-			return super(IndexClass, self).get(request, *args, **kwargs)"""
+			return super(IndexClass, self).get(request, *args, **kwargs)
 
 	def form_valid(self, form):
 		self.object = form.save(commit = False)
+		password = self.object.password
 		self.object.set_password(self.object.password)
 		self.object.save()
+
+		user = authenticate(username=self.object.username, password=password)
+		login_django(self.request, user)
 
 		return HttpResponseRedirect(self.get_success_url())
 
